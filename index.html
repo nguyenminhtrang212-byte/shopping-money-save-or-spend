@@ -81,6 +81,38 @@ h3{font-family:var(--head);font-weight:700;font-size:17px;margin:16px 0 6px}
 .vopt .nm{font-weight:700;font-family:var(--head);font-size:16px}
 .vopt .ds{font-size:13px;color:var(--muted)}
 
+
+/* ── Bước 2: thẻ ngữ pháp ── */
+.gcard{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:9px 0;background:var(--paper)}
+.gname{font-family:var(--head);font-weight:800;font-size:16px;margin-bottom:4px}
+.gform{background:var(--grapeSoft);border-radius:8px;padding:7px 11px;font-size:15px;margin:5px 0}
+
+/* ── Bước 2.4: thẻ tình huống ── */
+.storycard{border:1px solid var(--line);border-left:5px solid var(--t2);border-radius:0 12px 12px 0;padding:12px 15px;margin:10px 0;background:var(--paper)}
+.storyhead{font-size:17px;font-family:var(--head);margin-bottom:5px}
+.storytext{font-size:15px;line-height:1.6}
+.storyq{font-weight:700;font-size:15.5px;margin:9px 0 7px;font-family:var(--head)}
+
+/* ── Bước 3 ── */
+.partbar{background:var(--grape);color:#fff;font-family:var(--head);font-weight:800;font-size:15px;border-radius:10px;padding:8px 15px;margin:20px 0 10px}
+.qkind{display:inline-block;font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 12px;background:var(--t3Soft);color:var(--t3);margin-bottom:7px}
+.qkind.klong{background:var(--t1Soft);color:var(--t1)}
+.tipbox{background:var(--goldSoft);border-left:4px solid var(--gold);border-radius:0 9px 9px 0;padding:8px 12px;font-size:13.5px;margin:7px 0;line-height:1.7}
+.useline{margin-top:7px;font-size:13px}
+
+/* ── Bước 4: viết ── */
+.wpart{border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin:11px 0;background:var(--paper)}
+.wpname{font-family:var(--head);font-weight:800;font-size:16px;margin-bottom:5px}
+.wpsec{font-size:11.5px;font-weight:700;background:var(--grapeSoft);color:var(--grape);border-radius:999px;padding:2px 9px;margin-left:5px}
+.wpidea{background:var(--bg);border-radius:8px;padding:7px 11px;font-size:13.5px;margin:5px 0}
+.wptask{font-size:13.5px;margin:5px 0 7px}
+.wc.wcok{color:var(--ok);font-weight:600}
+.fbsec{border-top:1px solid var(--line);padding:8px 0 2px;margin-top:6px}
+.fbhead{font-size:14.5px;margin-bottom:4px}
+.fbsec ul{margin:4px 0;padding-left:20px}
+.fbsec li{margin:3px 0}
+.fixok{color:var(--ok);font-size:13px}
+
 /* ── Nhắc nhở ── */
 .remind{background:var(--goldSoft);border-left:5px solid var(--gold);border-radius:0 12px 12px 0;padding:11px 15px;margin:10px 0;font-size:14px}
 .remind[hidden]{display:none}
@@ -210,17 +242,16 @@ th{background:var(--grapeSoft);font-family:var(--head)}
 
 <header class="hero">
   <div>
-    <h1>Shopping &amp; Money</h1>
+    <h1 id="pageH1">Shopping &amp; Money</h1>
     <p class="sub">Should you save money or spend it on things you enjoy? · Nói &quot;có hồn&quot; với 3 tầng từ vựng</p>
     <div class="cue">
-      <b>🗺️ Lộ trình 6 bước</b>
+      <b id="roadLabel">🗺️ Lộ trình 5 bước</b>
       <ul>
-        <li><b>Bước 1:</b> Từ vựng 3 tầng (40 từ/cụm) + luyện phát âm 10 từ khó</li>
-        <li><b>Bước 2:</b> Ngữ pháp &amp; mẫu câu cảm xúc + shadowing 5 câu</li>
-        <li><b>Bước 3:</b> Chủ đề tranh luận — phe SAVE vs. phe SPEND</li>
-        <li><b>Bước 4:</b> Brainstorming &amp; khung lập luận 5 bước</li>
-        <li><b>Bước 5:</b> Nói trước, viết sau</li>
-        <li><b>Bước 6:</b> Nghe — Nói tự do — Nộp bài</li>
+        <li><b>Bước 1:</b> Từ vựng 3 tầng (15 từ) + luyện phát âm có chấm điểm</li>
+        <li><b>Bước 2:</b> Nói cảm xúc &amp; sự hối hận + shadowing</li>
+        <li><b>Bước 3:</b> Luyện nói — trả lời câu hỏi &amp; tranh luận</li>
+        <li><b>Bước 4:</b> Luyện viết — khai triển ý, máy chấm sơ bộ</li>
+        <li><b>Bước 5:</b> Nộp bài</li>
       </ul>
     </div>
   </div>
@@ -242,7 +273,7 @@ th{background:var(--grapeSoft);font-family:var(--head)}
 <section class="panel on" id="p-s0">
   <h2>Bước 0 · Chọn giọng đọc</h2>
   <div class="remind" id="remind-s0" hidden></div>
-  <p class="hint">Em nghe thử rồi chọn <b>một giọng</b> — giọng này sẽ đọc <b>toàn bộ bài học</b> và làm <b>giọng mẫu</b> để máy so sánh khi em ghi âm. Đổi sau thì bấm <b>⚙️ Đổi giọng</b> ở đầu trang.</p>
+  <p class="hint">Em nghe thử rồi chọn <b>một giọng</b> — giọng này đọc <b>toàn bộ bài</b> và làm <b>giọng mẫu</b> để máy chấm phát âm cho em.</p>
   <div class="vgrid2" id="voiceGrid"></div>
   <div class="navrow"><button class="b primary" id="s0Next">➡ Bắt đầu Bước 1</button></div>
 </section>
@@ -250,20 +281,19 @@ th{background:var(--grapeSoft);font-family:var(--head)}
 <section class="panel" id="p-s1">
   <h2>Bước 1 · Từ vựng 3 tầng (15 từ)</h2>
   <div class="remind" id="remind-s1" hidden></div>
-  <p class="hint">Mỗi từ có <b>loại từ</b>, <b>phiên âm</b>, <b>cụm thường đi cùng</b>, <b>ví dụ có dịch</b> và <b>bối cảnh dùng</b>. Em bấm 🔊 nghe hết rồi làm bài.</p>
+  <p class="hint">Mỗi từ có <b>loại từ</b>, <b>phiên âm</b>, <b>cụm thường đi cùng</b>, <b>ví dụ có dịch</b> và <b>bối cảnh dùng</b>.</p>
   <div id="s1Vocab"></div>
 
-  <h3>🎤 Luyện phát âm — máy chấm điểm và chữa lỗi cho em</h3>
+  <h3>🎤 Luyện phát âm — máy chấm điểm và chữa lỗi</h3>
   <div class="howto">
     <b>Cách làm mỗi từ:</b>
     <ol>
-      <li><b>🔊 Nghe mẫu</b> (hoặc 🐢 Mẫu chậm) — nghe kỹ trọng âm.</li>
-      <li><b>🎤 Ghi âm</b> → đọc to từ đó → <b>⏹ Dừng</b>.</li>
-      <li>Máy hiện <b>điểm phát âm</b>, tô <span class="wok">xanh</span> từ đọc đúng, <span class="wbad">đỏ</span> từ sai, và <b>gợi ý cách sửa từng âm</b>.</li>
-      <li><b>▶️ Nghe lại</b> giọng mình · <b>🔄 So sánh</b> (máy phát xen kẽ mẫu ↔ giọng em, 2 lượt).</li>
-      <li>Chưa ưng thì <b>🔁 Ghi lại</b>. Ưng rồi thì <b>💾 Gửi thầy/cô</b>.</li>
+      <li><b>🔊 Nghe mẫu</b> (hoặc 🐢 Mẫu chậm).</li>
+      <li><b>🎤 Ghi âm</b> → đọc to → <b>⏹ Dừng</b>.</li>
+      <li>Máy hiện <b>điểm</b>, tô <span class="wok">xanh</span> từ đúng, <span class="wbad">đỏ</span> từ sai + <b>cách sửa từng âm</b>.</li>
+      <li><b>▶️ Nghe lại</b> · <b>🔄 So sánh</b> (mẫu ↔ giọng em, 2 lượt).</li>
+      <li>Ưng rồi thì <b>💾 Gửi thầy/cô</b>.</li>
     </ol>
-    <div class="hint" style="margin:6px 0 0">💡 Lần đầu trình duyệt sẽ hỏi quyền micro — em bấm <b>Cho phép / Allow</b>.</div>
   </div>
   <div id="s1Drill"></div>
 
@@ -285,113 +315,102 @@ th{background:var(--grapeSoft);font-family:var(--head)}
   <p class="hint" style="margin-top:12px">Điền thành ngữ:</p>
   <div id="s1iMC"></div>
 
-  <h3>D · Sentence Builder — ghép 3 tầng</h3>
-  <p class="hint">Mỗi câu cho 3 nguyên liệu (1 word + 1 emotion + 1 idiom) — chọn câu ghép tự nhiên nhất.</p>
+  <h3>D · Ghép 3 tầng thành câu</h3>
+  <p class="hint">Mỗi câu cho 3 nguyên liệu — chọn câu ghép tự nhiên nhất.</p>
   <div id="s1build"></div>
 
   <div class="navrow"><button class="b primary" id="s1Next">➡ Sang Bước 2</button></div>
 </section>
 
 <section class="panel" id="p-s2">
-  <h2>Bước 2 · Ngữ pháp &amp; mẫu câu cảm xúc</h2>
+  <h2>Bước 2 · Nói cảm xúc &amp; sự hối hận</h2>
   <div class="remind" id="remind-s2" hidden></div>
+  <p class="hint">Bước này chỉ tập trung <b>2 việc</b>: nói mình <b>cảm thấy thế nào</b>, và nói mình <b>hối hận</b> điều gì. Đây là hai thứ làm câu nói của em "có hồn".</p>
+
   <h3>2.1 · Mẫu câu tranh luận — bản "đời"</h3>
   <div class="tbl" id="s2Upgrade"></div>
-  <h3>2.2 · Điểm ngữ pháp trọng tâm</h3>
-  <div class="tbl" id="s2Rules"></div>
-  <h3>2.3 · Bài tập</h3>
-  <p class="hint"><b>Bài 1</b> — điền khuyết hội thoại Anna–Ben:</p>
+
+  <h3>2.2 · Ngữ pháp: 3 cách nói CẢM XÚC + 3 cách nói HỐI HẬN</h3>
+  <div id="s2Rules"></div>
+
+  <h3>2.3 · Bài 1 — Điền khuyết hội thoại Anna–Ben</h3>
   <div id="s2Dialog"></div>
-  <p class="hint" style="margin-top:12px"><b>Bài 2</b> — ghép cảm xúc với tình huống:</p>
-  <div id="s2Match"></div>
-  <p class="hint" style="margin-top:12px"><b>Bài 3</b> — viết lại câu dùng cấu trúc cảm xúc:</p>
-  <div id="s2Rewrite"></div>
-  <h3>2.4 · 🎤 Shadowing — nói theo 5 câu mẫu</h3>
+
+  <h3>2.4 · Bài 2 — <i>How would he / she feel?</i></h3>
+  <div class="howto">
+    <b>Cách làm:</b> mỗi ô kể một <b>tình huống có thật</b> về một bạn (Mai, Nam, Linh…).
+    Em <b>đọc tình huống</b> (có bản dịch bên dưới), tự hỏi <i>"Nếu là bạn ấy, mình sẽ thấy thế nào?"</i>
+    rồi chọn câu trả lời đúng. Mỗi đáp án đều giải thích <b>vì sao đúng và vì sao các câu kia sai</b>.
+  </div>
+  <div id="s2Feel"></div>
+
+  <h3>2.5 · 🎤 Shadowing — nói theo 5 câu mẫu</h3>
   <p class="hint">Cùng cách làm như Bước 1: nghe mẫu → ghi âm → xem điểm và lỗi → so sánh → gửi.</p>
   <div id="s2Shadow"></div>
   <div class="navrow"><button class="b primary" id="s2Next">➡ Sang Bước 3</button></div>
 </section>
 
 <section class="panel" id="p-s3">
-  <h2>Bước 3 · Chủ đề tranh luận</h2>
+  <h2>Bước 3 · Luyện nói</h2>
   <div class="remind" id="remind-s3" hidden></div>
-  <div class="card topicbox">
-    <div class="topicq">Should you save money or spend it on things you enjoy?</div>
-    <div class="vexvi">→ Bạn nên tiết kiệm tiền hay tiêu cho những thứ mình thích?</div>
-  </div>
-  <div id="s3Sides"></div>
-  <h3>Bài tập phân loại</h3>
-  <p class="hint">Ý này thuộc phe nào?</p>
-  <div id="s3Q"></div>
-  <div class="navrow"><button class="b primary" id="s3Next">➡ Sang Bước 4</button></div>
-</section>
+  <p class="hint">Hai mục: <b>Mục 1</b> trả lời câu hỏi về suy nghĩ của em · <b>Mục 2</b> tranh luận với ý kiến của AI.</p>
 
-<section class="panel" id="p-s4">
-  <h2>Bước 4 · Brainstorming</h2>
-  <div class="remind" id="remind-s4" hidden></div>
-  <h3>4.1 · Xếp 15 từ vào đúng tầng</h3>
-  <div id="s4Map"></div>
-  <h3>4.2 · Hoàn thành câu cảm xúc</h3>
-  <div id="s4MC"></div>
-  <h3>4.3 · Khung lập luận 5 bước</h3>
-  <div class="card">
-    <div class="frame" style="text-align:center;font-family:var(--head);font-weight:700">OPINION → EMOTION → REASON → EXAMPLE → IDIOM</div>
-    <div class="tbl"><table>
-      <tr><th>Bước</th><th>Ví dụ mẫu (phe SAVE)</th><th>Nghĩa</th></tr>
-      <tr><td><b>OPINION</b></td><td>To be honest, I think young people should save more.</td><td class="vexvi">Thật lòng mà nói, tôi nghĩ người trẻ nên tiết kiệm nhiều hơn.</td></tr>
-      <tr><td><b>EMOTION</b></td><td>Having savings gives me peace of mind.</td><td class="vexvi">Có tiền tiết kiệm làm tôi an tâm.</td></tr>
-      <tr><td><b>REASON</b></td><td>Because you never know when an emergency will happen.</td><td class="vexvi">Vì không ai biết khi nào có chuyện khẩn cấp.</td></tr>
-      <tr><td><b>EXAMPLE</b></td><td>Last year my motorbike broke down and I had money ready.</td><td class="vexvi">Năm ngoái xe tôi hỏng và tôi đã có sẵn tiền.</td></tr>
-      <tr><td><b>IDIOM</b></td><td>At the end of the day, you have to save for a rainy day.</td><td class="vexvi">Suy cho cùng, phải để dành phòng thân.</td></tr>
-    </table></div>
-    <div class="recrow" style="margin-top:9px"><button class="b sm" id="s4PlayFrame">🔊 Nghe cả đoạn mẫu</button></div>
+  <div class="partbar">MỤC 1 · Trả lời câu hỏi — 2 câu ngắn + 1 câu dài</div>
+  <div class="howto">
+    <b>Cách làm mỗi câu:</b> nghe câu hỏi → đọc phần <b>🧭 Cách trả lời</b> → thử nói trước →
+    bấm <b>👀 Xem câu trả lời mẫu</b> để đối chiếu (có dịch + từ vựng đã dùng) → <b>🎤 ghi âm</b> câu của em → xem điểm → gửi.
+    <div class="hint" style="margin-top:6px">💡 Câu mẫu để em <b>học cách triển khai</b>, không phải để chép thuộc. Em kể chuyện của chính em.</div>
   </div>
-  <h3>4.4 · Notebook của em</h3>
-  <p class="hint">Ghi lại để dùng ở Bước 5 và 6.</p>
-  <div class="card" id="s4Note"></div>
-  <div class="navrow"><button class="b primary" id="s4Next">➡ Sang Bước 5</button></div>
-</section>
+  <div id="s3Part1"></div>
 
-<section class="panel" id="p-s5">
-  <h2>Bước 5 · Nói trước, viết sau</h2>
-  <div class="remind" id="remind-s5" hidden></div>
+  <div class="partbar">MỤC 2 · Tranh luận với AI</div>
   <div class="card aibox">
     <div style="font-weight:700;margin-bottom:4px">🤖 Ý kiến của AI — em đồng ý hay phản đối?</div>
     <div class="scriptbox" id="aiOpinion"></div>
     <div class="vexvi" id="aiOpinionVi" style="margin:6px 0 0"></div>
     <div class="recrow" style="margin-top:8px"><button class="b sm" id="playAI">🔊 Nghe ý kiến AI</button></div>
   </div>
-  <h3>5.1 · 🎤 Nói trước khi viết</h3>
-  <p class="hint">Nói <b>trước</b> rồi mới viết — câu văn sẽ tự nhiên hơn nhiều. Máy vẫn chấm điểm và chỉ lỗi như Bước 1.</p>
-  <div id="s5Rec"></div>
-  <h3>5.2 · Viết 2–3 câu mỗi phía</h3>
-  <p class="hint">Yêu cầu: ≥1 cụm cảm xúc (Tầng 2) + ≥1 idiom (Tầng 3) + ≥1 cấu trúc ngữ pháp Bước 2. Viết đủ 15 từ sẽ mở được bài mẫu.</p>
-  <div id="s5Write"></div>
-  <h3>5.3 · Checklist tự kiểm tra</h3>
-  <div class="card" id="s5Check"></div>
-  <div class="navrow"><button class="b primary" id="s5Next">➡ Sang Bước 6</button></div>
+  <h3>Ngân hàng ý cho hai phía</h3>
+  <p class="hint">Em không cần nghĩ từ đầu — chọn ý ở đây rồi kể thêm ví dụ của mình.</p>
+  <div id="s3Ideas"></div>
+  <h3>🎤 Ghi âm hai đoạn</h3>
+  <div id="s3Debate"></div>
+  <div class="navrow"><button class="b primary" id="s3Next">➡ Sang Bước 4</button></div>
 </section>
 
-<section class="panel" id="p-s6">
-  <h2>Bước 6 · Nghe — Nói tự do — Nộp bài</h2>
-  <div class="remind" id="remind-s6" hidden></div>
-  <h3>6.1 · Luyện nghe — 3 bài mẫu</h3>
-  <div id="s6Scripts"></div>
-  <h3>6.2 · 🎤 Nói tự do (90–120 giây)</h3>
-  <p class="hint">Em trả lời cả 3 câu dưới đây trong <b>một đoạn nói</b>. Dùng đủ 3 tầng từ vựng nhé.</p>
-  <div id="s6Qs"></div>
-  <div class="card">
-    <div style="font-weight:700;margin-bottom:6px">Ghi âm bài nói của em</div>
-    <div id="s6Rec"></div>
-    <div class="recrow" style="margin-top:10px"><button class="b sm" id="showModel">👀 Xem câu trả lời mẫu</button></div>
-    <div id="modelBox"></div>
+<section class="panel" id="p-s4">
+  <h2>Bước 4 · Luyện viết</h2>
+  <div class="remind" id="remind-s4" hidden></div>
+  <div class="card topicbox">
+    <div class="topicq" id="wTopic"></div>
+    <div class="vexvi" id="wTopicVi"></div>
   </div>
-  <h3>6.3 · Tự đánh giá</h3>
-  <div class="card" id="s6Check"></div>
-  <h3>6.4 · Hai ô bắt buộc trước khi nộp</h3>
-  <div class="card" id="s6Gate"></div>
-  <h3>6.5 · Khảo sát nhanh</h3>
-  <div class="card" id="s6Survey"></div>
+  <div class="howto">
+    <b>Cách làm:</b> hệ thống cho sẵn <b>4 ý chính</b> theo đúng thứ tự một bài tranh luận.
+    Việc của em là <b>khai triển từng ý bằng lời của chính mình</b>, kèm <b>ví dụ cá nhân</b>.
+    Viết tới đâu máy <b>chấm sơ bộ</b> tới đó: ngữ pháp, đủ ý, từ vựng, sức thuyết phục và
+    <b>khe hở lập luận</b> (chỗ người phản đối sẽ bắt bẻ).
+    <div class="hint" style="margin-top:6px">💡 Mỗi phần có nút <b>💡 Gợi ý thêm</b> và <b>👀 Xem câu mẫu</b> nếu em bí.</div>
+  </div>
+  <div id="s4Write"></div>
+  <div class="navrow">
+    <button class="b primary" id="wCheck">🔍 Chấm thử bài của em</button>
+    <button class="b" id="wFull">📄 Xem bài hoàn chỉnh</button>
+  </div>
+  <div id="wFullBox"></div>
+  <div class="scorebox" id="writeFb" hidden></div>
+  <div class="navrow"><button class="b primary" id="s4Next">➡ Sang Bước 5</button></div>
+</section>
+
+<section class="panel" id="p-s5">
+  <h2>Bước 5 · Nộp bài</h2>
+  <div class="remind" id="remind-s5" hidden></div>
+  <h3>5.1 · Tự đánh giá</h3>
+  <div class="card" id="s5Check"></div>
+  <h3>5.2 · Hai ô bắt buộc</h3>
+  <div class="card" id="s5Gate"></div>
+  <h3>5.3 · Khảo sát nhanh</h3>
+  <div class="card" id="s5Survey"></div>
   <h3>📨 Nộp bài cho thầy/cô</h3>
   <div class="card">
     <div id="todoBox"></div>
@@ -418,10 +437,9 @@ th{background:var(--grapeSoft);font-family:var(--head)}
   </div>
 </div>
 <script>
-
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwnf8X3_Xfk9F_8HQtBwSFU_s28sRjxKb0aFaHCA4ybmMJvgaztBAbdvaFzITdbVXBt/exec';
 const LESSON = 'Shopping-Money-Save-or-Spend';
 
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwnf8X3_Xfk9F_8HQtBwSFU_s28sRjxKb0aFaHCA4ybmMJvgaztBAbdvaFzITdbVXBt/exec';
 const TIER1=[{"e": "😬", "w": "broke", "pos": "(adj) tính từ", "ipa": "/brəʊk/", "vi": "hết sạch tiền, cạn túi", "exp": [["be flat broke", "nhẵn túi hoàn toàn"], ["broke until payday", "hết tiền tới ngày lĩnh lương"]], "ex": "I can't go out tonight — I'm completely broke.", "exvi": "Tối nay tớ không đi được — tớ hết sạch tiền rồi.", "use": "Nói với bạn bè khi từ chối đi chơi vì hết tiền. KHÔNG dùng trong văn viết trang trọng."}, {"e": "💸", "w": "splurge", "pos": "(v) động từ", "ipa": "/splɜːdʒ/", "vi": "vốc tiền mua, tiêu mạnh một lần", "exp": [["splurge on something", "vung tiền mua thứ gì"], ["splurge a little", "tiêu hơi mạnh tay một chút"]], "ex": "I got my bonus, so I splurged on a new phone.", "exvi": "Tớ được thưởng nên vung tiền mua điện thoại mới.", "use": "Kể về một lần tiêu mạnh — thường có chút tự hào hoặc hơi áy náy."}, {"e": "👍", "w": "affordable", "pos": "(adj) tính từ", "ipa": "/əˈfɔːdəbl/", "vi": "vừa túi tiền, giá hợp lý", "exp": [["affordable price", "giá phải chăng"], ["affordable housing", "nhà ở giá vừa túi tiền"]], "ex": "This restaurant is nice and affordable.", "exvi": "Nhà hàng này ngon mà giá lại vừa túi tiền.", "use": "Khen một món đồ/dịch vụ đáng tiền. Lịch sự hơn nói \"cheap\" (rẻ — dễ bị hiểu là kém chất lượng)."}, {"e": "🏦", "w": "savings", "pos": "(n) danh từ số nhiều", "ipa": "/ˈseɪvɪŋz/", "vi": "tiền tiết kiệm (luôn có \"s\")", "exp": [["put money into savings", "bỏ tiền vào khoản tiết kiệm"], ["savings account", "tài khoản tiết kiệm"]], "ex": "My savings give me peace of mind.", "exvi": "Khoản tiết kiệm làm tôi thấy an tâm.", "use": "Nói về khoản tiền để dành. Luôn ở dạng số nhiều — KHÔNG nói \"a saving\"."}, {"e": "😠", "w": "rip-off", "pos": "(n) danh từ", "ipa": "/ˈrɪp ɒf/", "vi": "giá cắt cổ, vụ chặt chém", "exp": [["What a rip-off!", "Chặt chém quá!"], ["a total rip-off", "chặt chém hoàn toàn"]], "ex": "800,000 dong for a haircut? What a rip-off!", "exvi": "800 nghìn cho một lần cắt tóc à? Chặt chém quá!", "use": "Phàn nàn khi bị tính giá quá cao. Rất thông dụng khi đi du lịch, mua sắm."}];
 const TIER2=[{"e": "😌", "w": "peace of mind", "pos": "(cụm danh từ)", "ipa": "/piːs əv maɪnd/", "vi": "sự an tâm, yên lòng", "exp": [["give somebody peace of mind", "làm ai đó an tâm"], ["for peace of mind", "để cho yên tâm"]], "ex": "Having savings gives me peace of mind.", "exvi": "Có tiền tiết kiệm làm tôi thấy an tâm.", "use": "Dùng khi giải thích VÌ SAO nên tiết kiệm — lý do cảm xúc, mạnh hơn lý do tiền bạc."}, {"e": "😰", "w": "stresses me out", "pos": "(cụm động từ)", "ipa": "/ˈstresɪz miː aʊt/", "vi": "làm tôi căng thẳng", "exp": [["it stresses me out", "chuyện đó làm tôi stress"], ["stress somebody out", "làm ai căng thẳng"]], "ex": "Checking my bank balance really stresses me out.", "exvi": "Kiểm tra số dư tài khoản làm tôi căng thẳng thật sự.", "use": "Nói về điều khiến mình lo lắng. Chủ ngữ số ít thì thêm \"es\": stress → stresses."}, {"e": "😓", "w": "feel guilty", "pos": "(cụm tính từ)", "ipa": "/fiːl ˈɡɪlti/", "vi": "thấy có lỗi, áy náy", "exp": [["feel guilty about something", "thấy có lỗi về việc gì"], ["feel guilty for V-ing", "áy náy vì đã làm gì"]], "ex": "I feel guilty after shopping online at midnight.", "exvi": "Tôi thấy áy náy sau khi mua sắm online lúc nửa đêm.", "use": "Nói cảm giác sau khi tiêu quá tay. Chữ \"u\" CÂM — đọc \"GIL-ti\"."}, {"e": "🤔", "w": "torn between A and B", "pos": "(cụm tính từ)", "ipa": "/tɔːn bɪˈtwiːn/", "vi": "phân vân giữa hai lựa chọn", "exp": [["torn between two options", "phân vân giữa hai lựa chọn"], ["I'm torn", "tôi đang phân vân"]], "ex": "I'm torn between saving for a house and travelling now.", "exvi": "Tôi phân vân giữa để dành mua nhà và đi du lịch ngay bây giờ.", "use": "Dùng khi tranh luận để thể hiện mình thấy cả hai phía đều có lý — nghe rất chín chắn."}, {"e": "💎", "w": "worth every penny", "pos": "(cụm tính từ)", "ipa": "/wɜːθ ˈevri ˈpeni/", "vi": "đáng từng đồng", "exp": [["be worth every penny", "đáng từng đồng bỏ ra"], ["worth it in the long run", "đáng về lâu dài"]], "ex": "The course was expensive but worth every penny.", "exvi": "Khoá học đắt nhưng đáng từng đồng.", "use": "Bảo vệ một khoản chi lớn. Thường đi sau \"but\" để tạo tương phản."}];
 const TIER3=[{"e": "☔", "w": "save for a rainy day", "pos": "(idiom) thành ngữ", "ipa": "/seɪv fər ə ˈreɪni deɪ/", "vi": "để dành phòng khi khó khăn", "exp": [["always save for a rainy day", "luôn để dành phòng thân"], ["a rainy day fund", "quỹ dự phòng"]], "ex": "You never know what will happen — save for a rainy day.", "exvi": "Không ai biết trước điều gì — hãy để dành phòng thân.", "use": "Câu \"tủ\" của phe TIẾT KIỆM. Người lớn hay dùng để khuyên con cháu."}, {"e": "🔁", "w": "live from paycheck to paycheck", "pos": "(idiom) thành ngữ", "ipa": "/lɪv frəm ˈpeɪtʃek/", "vi": "sống lần hồi từng tháng lương", "exp": [["live paycheck to paycheck", "sống tháng nào hết tháng đó"], ["barely make it to payday", "chật vật tới ngày lương"]], "ex": "Many young people live from paycheck to paycheck.", "exvi": "Nhiều bạn trẻ sống tháng nào hết tháng đó.", "use": "Mô tả tình trạng không dư đồng nào. Dùng để chỉ ra HẬU QUẢ của việc không tiết kiệm."}, {"e": "🏚️", "w": "break the bank", "pos": "(idiom) thành ngữ", "ipa": "/breɪk ðə bæŋk/", "vi": "làm cạn sạch tiền, vỡ kế hoạch", "exp": [["won't break the bank", "sẽ không tốn kém mấy"], ["without breaking the bank", "mà không cháy túi"]], "ex": "A weekend trip won't break the bank.", "exvi": "Một chuyến đi cuối tuần thì không tốn kém mấy đâu.", "use": "Thường dùng ở dạng PHỦ ĐỊNH để bênh vực việc tiêu tiền vừa phải."}, {"e": "⏳", "w": "life is short — treat yourself", "pos": "(idiom) thành ngữ", "ipa": "/laɪf ɪz ʃɔːt/", "vi": "đời ngắn lắm — tự thưởng đi", "exp": [["treat yourself", "tự thưởng cho mình"], ["you only live once", "đời có một lần thôi"]], "ex": "You worked hard all month — life is short, treat yourself!", "exvi": "Em làm việc vất vả cả tháng rồi — đời ngắn lắm, tự thưởng đi!", "use": "Câu \"tủ\" của phe TIÊU TIỀN. Đổi đại từ theo chủ ngữ: treat myself / yourself."}, {"e": "🛒", "w": "retail therapy", "pos": "(n) danh từ", "ipa": "/ˈriːteɪl ˈθerəpi/", "vi": "mua sắm để giải toả tâm trạng", "exp": [["a bit of retail therapy", "mua sắm giải stress một chút"], ["go for retail therapy", "đi mua sắm cho khuây khoả"]], "ex": "After a terrible week, I needed some retail therapy.", "exvi": "Sau một tuần tệ hại, tôi cần đi mua sắm cho khuây khoả.", "use": "Cách nói vui, nhẹ nhàng về việc mua sắm khi buồn. Âm /θ/ trong \"therapy\" — lưỡi giữa hai hàm răng."}];
@@ -435,25 +453,25 @@ const I_MATCH=[{"q": "I put money aside every month, just in case.", "a": "save 
 const I_MC=[{"q": "You never know what will happen — you should ___.", "o": ["break the bank", "save for a rainy day", "go for retail therapy", "live paycheck to paycheck"], "a": 1, "x": "save for a rainy day = để dành phòng lúc khó khăn."}, {"q": "A small treat once a month won't ___.", "o": ["break the bank", "save for a rainy day", "be a rip-off", "feel guilty"], "a": 0, "x": "break the bank thường dùng PHỦ ĐỊNH: won't break the bank = không tốn kém mấy."}, {"q": "He earns well but has no savings — he ___.", "o": ["saves for a rainy day", "lives from paycheck to paycheck", "breaks the bank", "is affordable"], "a": 1, "x": "live from paycheck to paycheck = tháng nào hết tháng đó."}, {"q": "I was sad, so I went shopping — a bit of ___.", "o": ["peace of mind", "retail therapy", "rip-off", "savings"], "a": 1, "x": "retail therapy = mua sắm để giải toả tâm trạng."}, {"q": "You worked 60 hours this week — ___!", "o": ["money doesn't grow on trees", "life is short, treat yourself", "save for a rainy day", "you are broke"], "a": 1, "x": "Câu động viên tự thưởng sau khi làm việc vất vả."}];
 const BUILDER=[{"ing": "broke + stresses me out + live from paycheck to paycheck", "o": ["I am broke and stress and paycheck to paycheck.", "Being broke really stresses me out — I live from paycheck to paycheck.", "I live paycheck and broke stresses me."], "a": 1, "x": "Dùng \"Being + adj\" làm chủ ngữ, đủ 3 tầng, câu trôi chảy."}, {"ing": "savings + peace of mind + save for a rainy day", "o": ["Savings peace of mind rainy day good.", "My savings give me peace of mind — I always save for a rainy day.", "I save rainy day because peace of mind savings."], "a": 1, "x": "Dùng \"give somebody peace of mind\" — cấu trúc chuẩn."}, {"ing": "splurge + worth every penny + life is short", "o": ["I splurged on a good mattress and it was worth every penny — life is short!", "Splurge worth penny life short always.", "Life short I splurge penny worth."], "a": 0, "x": "Kể câu chuyện nhỏ: hành động → cảm nhận → lời khuyên."}, {"ing": "rip-off + stresses me out + break the bank", "o": ["Rip-off stress bank break me.", "Tourist prices are a rip-off and it stresses me out — one trip can break the bank.", "It break the bank so rip-off stresses."], "a": 1, "x": "Nối hai mệnh đề bằng \"and\", rồi giải thích bằng dấu gạch ngang."}, {"ing": "affordable + torn between + retail therapy", "o": ["Affordable torn therapy shopping me.", "Torn I am between affordable and therapy.", "I'm torn between saving and a bit of retail therapy — but this shop is affordable."], "a": 2, "x": "Dùng \"torn between A and B\" rồi thêm lý do bằng \"but\"."}];
 const UPGRADE=[["Nêu ý kiến", "In my opinion…", "To be honest, I think… / Personally, I feel…", "To be honest, I think saving is important.", "Thật lòng mà nói, tôi nghĩ tiết kiệm rất quan trọng."], ["Đồng ý", "I agree because…", "That's so true — I totally agree.", "That's so true — I totally agree.", "Đúng quá — tôi hoàn toàn đồng ý."], ["Phản đối", "I disagree because…", "I see where you're coming from, but…", "I see where you're coming from, but life is short.", "Tôi hiểu ý bạn, nhưng đời ngắn lắm."], ["Ví dụ", "For example…", "Take my case — / Like, for example…", "Take my case — I saved for two years.", "Lấy trường hợp của tôi — tôi đã để dành hai năm."], ["Kết luận", "In conclusion…", "At the end of the day,… / All in all,…", "At the end of the day, balance is the answer.", "Suy cho cùng, cân bằng mới là câu trả lời."]];
-const GRAMMAR_RULES=[["So sánh hơn", "adj-er / more + adj + <b>than</b>", "Saving is <b>safer than</b> spending.", "Tiết kiệm an toàn hơn tiêu xài."], ["Should / Shouldn't", "S + should (not) + V", "You <b>shouldn't</b> buy things you don't need.", "Bạn không nên mua thứ mình không cần."], ["Điều kiện loại 1", "<b>If</b> + S + V(htđ), S + <b>will</b> + V", "<b>If</b> I save more, I <b>will</b> feel safer.", "Nếu tôi để dành nhiều hơn, tôi sẽ thấy an toàn hơn."], ["much / many", "<b>many</b> + N đếm được · <b>much</b> + N không đếm", "I don't have <b>much money</b>, but <b>many bills</b>.", "Tôi không có nhiều tiền, nhưng có nhiều hoá đơn."], ["Cấu trúc cảm xúc", "S + <b>make(s) me feel</b> + adj · It <b>gives me</b> + N", "Debt <b>makes me feel</b> anxious.", "Nợ nần làm tôi thấy lo lắng."], ["Regret + V-ing", "S + regret + <b>V-ing</b>", "I <b>regret spending</b> so much last month.", "Tôi hối hận vì đã tiêu nhiều thế tháng trước."]];
-const DIALOG_BLANKS=[{"before": "Anna:", "after": ", I think we should save more this year.", "o": ["To be honest", "Money speaking", "For conclusion"], "a": 0, "x": "Mở đầu ý kiến kiểu thân mật, tự nhiên."}, {"before": "Ben:", "after": " — I totally agree. My rent went up again.", "o": ["I disagree", "That's so true", "For example"], "a": 1, "x": "Đồng ý mạnh, tự nhiên hơn \"I agree\"."}, {"before": "Anna:", "after": " — last month I spent 3 million on clothes I never wear.", "o": ["Take my case", "In conclusion", "I am not sure"], "a": 0, "x": "Dẫn ví dụ của chính mình."}, {"before": "Ben: I", "after": ", but we still need some fun. Life is short!", "o": ["totally agree with all", "see where you're coming from", "have no opinion"], "a": 1, "x": "Công nhận trước khi phản đối — lịch sự."}, {"before": "Anna:", "after": ", balance is the answer.", "o": ["At the end of the day", "For example", "To be honest"], "a": 0, "x": "Kết luận kiểu nói chuyện đời thường."}];
-const G2_MATCH=[{"q": "My bank balance is negative.", "a": "stresses me out"}, {"q": "I have money for emergencies.", "a": "peace of mind"}, {"q": "I bought snacks I didn't need.", "a": "feel guilty"}, {"q": "Save for a house or travel now?", "a": "torn between"}, {"q": "The course changed my career.", "a": "worth every penny"}];
-const REWRITE=[{"q": "I am anxious because of my debt.", "a": ["my debt makes me feel anxious"], "show": "My debt <b>makes me feel</b> anxious.", "showvi": "Nợ nần làm tôi thấy lo lắng.", "x": "Đổi chủ ngữ sang nguyên nhân + make sb feel + adj."}, {"q": "I feel safe because I have savings.", "a": ["my savings give me peace of mind"], "show": "My savings <b>give me</b> peace of mind.", "showvi": "Khoản tiết kiệm làm tôi an tâm.", "x": "Dùng give sb + N thay cho feel + adj."}, {"q": "I bought that bag and now I'm sorry.", "a": ["i regret buying that bag"], "show": "I <b>regret buying</b> that bag.", "showvi": "Tôi hối hận vì đã mua cái túi đó.", "x": "regret + V-ing cho việc đã làm trong quá khứ."}];
-const SIDE_SAVE=[["Savings protect you in emergencies", "peace of mind", "When my motorbike broke down, I had money ready.", "Khi xe tôi hỏng, tôi đã có sẵn tiền."], ["Without savings you never feel free", "live from paycheck to paycheck", "My cousin earns well but lives from paycheck to paycheck.", "Anh họ tôi lương cao nhưng tháng nào hết tháng đó."], ["Small savings grow into big things", "worth every penny", "I saved 2 million a month for a year.", "Tôi để dành 2 triệu mỗi tháng suốt một năm."], ["Spending too much creates stress", "stresses me out", "Checking my balance after Tet really stresses me out.", "Kiểm tra số dư sau Tết làm tôi căng thẳng thật sự."]];
-const SIDE_SPEND=[["Spending can fix a bad mood", "retail therapy", "After a hard week, a little retail therapy helps me.", "Sau một tuần vất vả, mua sắm một chút giúp tôi khuây khoả."], ["You only live once", "life is short — treat yourself", "Life is short — treat yourself sometimes!", "Đời ngắn lắm — thỉnh thoảng tự thưởng đi!"], ["Small treats are not expensive", "won't break the bank", "One coffee a week won't break the bank.", "Một ly cà phê mỗi tuần thì không tốn kém mấy."], ["Good things are an investment", "worth every penny", "My English course was worth every penny.", "Khoá tiếng Anh của tôi đáng từng đồng."]];
-const SIDE_Q=[{"q": "You never know when you'll lose your job.", "a": 0, "x": "Nói về rủi ro tương lai → lý do để dành."}, {"q": "A nice dinner once a month won't break the bank.", "a": 1, "x": "won't break the bank = tiêu nhưng vẫn an toàn."}, {"q": "I want to buy a house before I'm 35.", "a": 0, "x": "Mục tiêu lớn cần tích luỹ."}, {"q": "Shopping makes me feel better after a bad day.", "a": 1, "x": "retail therapy — tiêu để cải thiện cảm xúc."}, {"q": "My cousin earns well but has nothing left by the 25th.", "a": 0, "x": "Hậu quả của việc không tiết kiệm."}, {"q": "I'd rather have memories than a full bank account.", "a": 1, "x": "Ưu tiên trải nghiệm hơn tích luỹ."}];
-const MINDMAP=[["broke", 0], ["splurge", 0], ["affordable", 0], ["savings", 0], ["rip-off", 0], ["peace of mind", 1], ["stresses me out", 1], ["feel guilty", 1], ["torn between", 1], ["worth every penny", 1], ["save for a rainy day", 2], ["live from paycheck to paycheck", 2], ["break the bank", 2], ["life is short", 2], ["retail therapy", 2]];
-const B4_MC=[{"q": "Having 6 months of savings gives me ___.", "o": ["peace of mind", "retail therapy", "a rip-off"], "a": 0, "x": "give sb peace of mind = mang lại sự an tâm — cụm cố định."}, {"q": "I'm ___ saving for a house and travelling with friends.", "o": ["annoyed by", "torn between", "relieved about"], "a": 1, "x": "torn between A and B = phân vân giữa hai lựa chọn."}, {"q": "After buying three jackets online, I ___.", "o": ["felt secure", "felt excited", "felt guilty"], "a": 2, "x": "Mua thứ không cần → cảm giác có lỗi."}, {"q": "The course was expensive, but it was ___.", "o": ["a rip-off", "worth every penny", "breaking the bank"], "a": 1, "x": "\"but\" báo ý tương phản tích cực → worth every penny."}];
-const SCRIPTS=[{"name": "Bài 1 — Phe SAVE", "en": "To be honest, I think saving comes first. Having money in the bank gives me peace of mind. My grandmother always said: save for a rainy day.", "vi": "Thật lòng mà nói, tôi nghĩ tiết kiệm là trên hết. Có tiền trong ngân hàng làm tôi an tâm. Bà tôi luôn nói: hãy để dành phòng thân.", "keys": "gives me peace of mind · save for a rainy day"}, {"name": "Bài 2 — Phe SPEND", "en": "I'm not sure I agree. Life is short, and I work really hard all week. A small treat on Friday makes me feel human again. One coffee won't break the bank.", "vi": "Tôi không chắc là mình đồng ý. Đời ngắn lắm, và tôi làm việc rất vất vả cả tuần. Một phần thưởng nhỏ vào thứ Sáu làm tôi thấy mình sống lại. Một ly cà phê thì không tốn kém mấy.", "keys": "life is short · treat · won't break the bank"}, {"name": "Bài 3 — Cân bằng", "en": "Personally, I feel it's about balance. I save seventy percent and spend thirty percent on things I enjoy. That way I never feel guilty.", "vi": "Cá nhân tôi thấy quan trọng là cân bằng. Tôi để dành bảy mươi phần trăm và tiêu ba mươi phần trăm cho thứ mình thích. Như vậy tôi không bao giờ thấy áy náy.", "keys": "balance · never feel guilty"}];
-const FREE_Q=[{"en": "What's your opinion about saving money? How does it make you feel?", "vi": "Em nghĩ gì về tiết kiệm? Nó khiến em cảm thấy thế nào?"}, {"en": "Tell me about a time you spent money on something you really wanted.", "vi": "Kể một lần em tiêu tiền cho thứ em rất muốn."}, {"en": "What do you disagree with in the AI's opinion?", "vi": "Em phản đối điểm nào trong ý kiến của AI?"}];
+const GRAMMAR_RULES=[["😊 Cảm xúc — cách 1", "S + <b>make(s) me feel</b> + tính từ", "Debt <b>makes me feel</b> anxious.", "Nợ nần làm tôi thấy lo lắng.", "Chủ ngữ là NGUYÊN NHÂN. Sau \"feel\" dùng TÍNH TỪ, không dùng danh từ."], ["😊 Cảm xúc — cách 2", "S + <b>give(s) me</b> + danh từ", "Savings <b>give me</b> peace of mind.", "Tiền tiết kiệm làm tôi an tâm.", "Sau \"give me\" dùng DANH TỪ (peace of mind, confidence…), không dùng tính từ."], ["😊 Cảm xúc — cách 3", "S + <b>feel</b> + tính từ + <b>about</b> + danh từ", "I <b>feel guilty about</b> my shopping habit.", "Tôi thấy áy náy về thói quen mua sắm của mình.", "Nói cảm xúc CỦA MÌNH về một việc. Nhớ giới từ \"about\"."], ["😔 Hối hận — cách 1", "S + <b>regret</b> + V-ing", "I <b>regret buying</b> that jacket.", "Tôi hối hận vì đã mua cái áo khoác đó.", "Hối hận về việc ĐÃ LÀM. Sau \"regret\" là V-ing, KHÔNG phải \"to V\"."], ["😔 Hối hận — cách 2", "S + <b>should have</b> + V3 (quá khứ phân từ)", "I <b>should have saved</b> that money.", "Lẽ ra tôi nên để dành số tiền đó.", "Tiếc vì ĐÃ KHÔNG làm. Nói nhanh thành \"should've\"."], ["😔 Hối hận — cách 3", "S + <b>wish</b> + S + V quá khứ", "I <b>wish I had</b> more savings.", "Giá mà tôi có nhiều tiền tiết kiệm hơn.", "Ước điều trái với hiện tại. Sau \"wish\" dùng thì QUÁ KHỨ dù đang nói hiện tại."]];
+const DIALOG_BLANKS=[{"before": "Anna:", "after": ", I think we should save more this year.", "o": ["To be honest", "Money speaking", "For conclusion"], "a": 0, "x": "Mở đầu ý kiến kiểu thân mật, tự nhiên."}, {"before": "Ben:", "after": " — I totally agree. My rent went up again.", "o": ["I disagree", "That's so true", "For example"], "a": 1, "x": "Đồng ý mạnh, tự nhiên hơn \"I agree\"."}, {"before": "Anna:", "after": " — last month I spent 3 million on clothes I never wear.", "o": ["Take my case", "In conclusion", "I am not sure"], "a": 0, "x": "Dẫn ví dụ của chính mình."}, {"before": "Ben: I", "after": ", but we still need some fun. Life is short!", "o": ["totally agree with all", "see where you're coming from", "have no opinion"], "a": 1, "x": "Công nhận trước khi phản đối — lịch sự hơn."}, {"before": "Anna:", "after": ", balance is the answer.", "o": ["At the end of the day", "For example", "To be honest"], "a": 0, "x": "Kết luận kiểu nói chuyện đời thường."}];
+const FEEL_Q=[{"name": "Mai", "e": "👩", "story": "Mai spent 3 million dong on three dresses. She has only worn one of them. Now her bank balance is very low.", "storyvi": "Mai tiêu 3 triệu mua ba cái váy. Cô ấy mới mặc một cái. Giờ tài khoản của cô ấy gần cạn.", "q": "How would Mai feel?", "o": ["She would feel guilty.", "She would feel secure.", "She would feel relieved."], "a": 0, "x": "Mua thứ không dùng đến + hết tiền → <b>feel guilty</b> (áy náy). \"Secure\" là vững tâm, \"relieved\" là nhẹ nhõm — đều không hợp."}, {"name": "Nam", "e": "👨", "story": "Nam has saved six months of salary in the bank. Last week his motorbike broke down and he paid for it easily.", "storyvi": "Nam đã để dành được sáu tháng lương. Tuần trước xe anh hỏng và anh trả tiền sửa rất nhẹ nhàng.", "q": "How would Nam feel?", "o": ["He would feel broke.", "He would have peace of mind.", "He would feel torn."], "a": 1, "x": "Có tiền dự phòng, xử lý được sự cố → <b>have peace of mind</b> (an tâm). \"Broke\" là hết tiền — ngược hẳn."}, {"name": "Linh", "e": "👩", "story": "Linh gets a message every day: \"SALE 50% TODAY ONLY\". She opens the app every time, even when she does not need anything.", "storyvi": "Linh nhận tin nhắn mỗi ngày: \"GIẢM 50% CHỈ HÔM NAY\". Lần nào cô cũng mở app, kể cả khi không cần gì.", "q": "What is Linh's problem?", "o": ["She can't resist a sale.", "She is torn between two jobs.", "She feels relieved."], "a": 0, "x": "Thấy giảm giá là không nhịn được → <b>can't resist</b>. Đây là thói quen, không phải phân vân hay nhẹ nhõm."}, {"name": "Huy", "e": "👨", "story": "Huy wants to buy a motorbike this year. But his friends are planning a trip to Da Nang. He has enough money for only one.", "storyvi": "Huy muốn mua xe máy năm nay. Nhưng bạn bè đang rủ đi Đà Nẵng. Anh chỉ đủ tiền cho một thứ.", "q": "How would Huy feel?", "o": ["He would feel guilty.", "He would be torn between two choices.", "He would feel broke."], "a": 1, "x": "Hai lựa chọn, chỉ chọn được một → <b>torn between A and B</b> (phân vân). Chưa tiêu nên chưa áy náy."}, {"name": "Trang", "e": "👩", "story": "Trang paid 15 million for an English course. It was a lot of money. Six months later she got a better job because of it.", "storyvi": "Trang trả 15 triệu cho một khoá tiếng Anh. Đó là số tiền lớn. Sáu tháng sau cô có việc tốt hơn nhờ khoá học đó.", "q": "What would Trang say about the course?", "o": ["It was a rip-off.", "It was worth every penny.", "It broke the bank."], "a": 1, "x": "Đắt nhưng mang lại kết quả tốt → <b>worth every penny</b> (đáng từng đồng). \"Rip-off\" là bị chặt chém — ngược nghĩa."}, {"name": "Khoa", "e": "👨", "story": "Khoa gets his salary on the 5th. By the 25th he has no money left. This happens every single month.", "storyvi": "Khoa nhận lương ngày 5. Đến ngày 25 là hết sạch tiền. Tháng nào cũng vậy.", "q": "How would you describe Khoa's situation?", "o": ["He lives from paycheck to paycheck.", "He saves for a rainy day.", "He feels secure."], "a": 0, "x": "Tháng nào cũng hết sạch trước kỳ lương sau → <b>live from paycheck to paycheck</b>."}];
+const SPEAK_Q=[{"kind": "ngắn", "sec": 40, "q": "Do you usually save money every month?", "qvi": "Em có thường để dành tiền hàng tháng không?", "model": "Yes, I do. I put about two million dong into my savings every month. It gives me peace of mind, because I never know when something will happen.", "modelvi": "Có ạ. Em bỏ khoảng hai triệu vào khoản tiết kiệm mỗi tháng. Việc đó làm em an tâm, vì em không biết khi nào có chuyện xảy ra.", "uses": ["savings", "peace of mind"], "tips": "Trả lời Yes/No trước → nói con số cụ thể → thêm cảm xúc. Đừng chỉ nói \"Yes\"."}, {"kind": "ngắn", "sec": 40, "q": "What was the last thing you splurged on?", "qvi": "Thứ gần nhất em vung tiền mua là gì?", "model": "The last thing I splurged on was a new phone. It was quite expensive, so I felt guilty at first. But I use it every day, so it was worth every penny.", "modelvi": "Thứ gần nhất em vung tiền mua là một chiếc điện thoại mới. Nó khá đắt nên lúc đầu em thấy áy náy. Nhưng em dùng nó mỗi ngày nên nó đáng từng đồng.", "uses": ["splurge", "feel guilty", "worth every penny"], "tips": "Lặp lại cấu trúc câu hỏi để mở đầu → kể cảm xúc lúc đó → kết bằng đánh giá bây giờ."}, {"kind": "dài", "sec": 75, "q": "Why do you think many young people find it hard to save money these days?", "qvi": "Theo em vì sao nhiều bạn trẻ ngày nay khó để dành tiền?", "model": "I think there are two main reasons. First, rent and food are much more expensive than before, so a lot of young people live from paycheck to paycheck. Second, shopping is just too easy now — you see a sale on your phone and you can't resist. For example, my cousin earns well, but by the twenty-fifth of every month he is completely broke. At the end of the day, I think we all need to save for a rainy day, even if it's only a small amount.", "modelvi": "Em nghĩ có hai lý do chính. Thứ nhất, tiền thuê nhà và ăn uống đắt hơn trước rất nhiều, nên nhiều bạn trẻ sống tháng nào hết tháng đó. Thứ hai, mua sắm bây giờ quá dễ — thấy giảm giá trên điện thoại là không nhịn được. Ví dụ, anh họ em lương cao, nhưng cứ đến ngày 25 hàng tháng là hết sạch tiền. Suy cho cùng, em nghĩ ai cũng cần để dành phòng thân, dù chỉ một ít.", "uses": ["live from paycheck to paycheck", "can't resist", "broke", "save for a rainy day"], "tips": "Đây là câu DÀI kiểu IELTS Part 3 — trả lời theo 4 bước:\n① \"I think there are two main reasons.\" (báo trước có mấy ý)\n② \"First… Second…\" (nêu từng ý)\n③ \"For example, my cousin…\" (ví dụ ĐỜI THẬT của em)\n④ \"At the end of the day…\" (chốt lại)"}];
+const SIDE_SAVE=[["Phòng khi có chuyện bất ngờ", "peace of mind", "When my motorbike broke down, I had money ready.", "Khi xe tôi hỏng, tôi đã có sẵn tiền."], ["Không có tiết kiệm thì không tự do", "live from paycheck to paycheck", "My cousin earns well but lives from paycheck to paycheck.", "Anh họ tôi lương cao nhưng tháng nào hết tháng đó."], ["Tiết kiệm nhỏ thành việc lớn", "save for a rainy day", "I saved two million a month for a year.", "Tôi để dành hai triệu mỗi tháng suốt một năm."]];
+const SIDE_SPEND=[["Tiêu một chút giúp cân bằng tinh thần", "retail therapy", "After a hard week, a little retail therapy helps me.", "Sau một tuần vất vả, mua sắm một chút giúp tôi khuây khoả."], ["Đời ngắn, nên tự thưởng", "life is short — treat yourself", "Life is short — treat yourself sometimes!", "Đời ngắn lắm — thỉnh thoảng tự thưởng đi!"], ["Phần thưởng nhỏ không tốn kém", "won't break the bank", "One coffee a week won't break the bank.", "Một ly cà phê mỗi tuần thì không tốn kém mấy."]];
 const AI_OPINION="I think people should save all their money and never buy things they want. Life is expensive, and money doesn't grow on trees.";
 const AI_OPINION_VI="Tôi nghĩ mọi người nên tiết kiệm toàn bộ tiền và không bao giờ mua thứ mình thích. Cuộc sống đắt đỏ, và tiền không tự nhiên mà có.";
 const MODEL_FOR="I see where the AI is coming from. Saving money gives me peace of mind, because you never know when an emergency will happen. Last year my motorbike broke down and I was glad I had saved for a rainy day.";
 const MODEL_FOR_VI="Tôi hiểu ý của AI. Tiết kiệm làm tôi an tâm, vì không ai biết khi nào có chuyện khẩn cấp. Năm ngoái xe tôi hỏng và tôi mừng vì đã để dành phòng thân.";
 const MODEL_AGAINST="I'm not sure I agree, though. If you never spend anything, you will feel tired and unhappy. A small treat after a hard week makes me feel better, and it won't break the bank. At the end of the day, life is short.";
 const MODEL_AGAINST_VI="Nhưng tôi không chắc là mình đồng ý. Nếu không bao giờ tiêu gì, bạn sẽ thấy mệt mỏi và không vui. Một phần thưởng nhỏ sau tuần vất vả làm tôi thấy khá hơn, mà lại không tốn kém mấy. Suy cho cùng, đời ngắn lắm.";
-const MODEL_FREE="To be honest, I think saving is really important, but not everything. Having savings gives me peace of mind, because I know I can handle an emergency. But last year I splurged on an English course. It was expensive and I felt guilty at first, but it was worth every penny. So I don't fully agree with the AI. Life is short, and a small treat won't break the bank.";
-const MODEL_FREE_VI="Thật lòng mà nói, tôi nghĩ tiết kiệm rất quan trọng, nhưng không phải là tất cả. Có tiền tiết kiệm làm tôi an tâm, vì tôi biết mình xoay sở được khi có chuyện. Nhưng năm ngoái tôi đã vung tiền cho một khoá tiếng Anh. Nó đắt và lúc đầu tôi thấy áy náy, nhưng nó đáng từng đồng. Nên tôi không hoàn toàn đồng ý với AI. Đời ngắn lắm, và một phần thưởng nhỏ thì không tốn kém mấy.";
+const WRITE_TOPIC="Should you save money or spend it on things you enjoy?";
+const WRITE_TOPIC_VI="Bạn nên tiết kiệm tiền hay tiêu cho những thứ mình thích?";
+const WRITE_PARTS=[{"key": "opinion", "n": "① Ý kiến của em", "sec": "OPINION", "min": 12, "idea": "Em nghiêng về phía nào? (tiết kiệm / tiêu / cân bằng cả hai)", "task": "Viết 1 câu nêu rõ lập trường. Dùng \"To be honest, I think…\" hoặc \"Personally, I feel…\".", "model": "To be honest, I think saving is important, but spending a little is also necessary.", "modelvi": "Thật lòng mà nói, tôi nghĩ tiết kiệm quan trọng, nhưng tiêu một chút cũng cần thiết.", "need": ["think", "feel"], "hint": "Đừng viết \"I think save money is good\" — sau \"think\" phải là một MỆNH ĐỀ: I think <b>saving</b> money <b>is</b> good."}, {"key": "reason", "n": "② Lý do + cảm xúc", "sec": "REASON + EMOTION", "min": 15, "idea": "Vì sao em nghĩ vậy? Điều đó khiến em CẢM THẤY thế nào?", "task": "Viết 1–2 câu. Bắt buộc dùng 1 cấu trúc cảm xúc ở Bước 2 (makes me feel / gives me / feel … about).", "model": "Having savings gives me peace of mind, because I never know when an emergency will happen.", "modelvi": "Có tiền tiết kiệm làm tôi an tâm, vì tôi không biết khi nào có chuyện khẩn cấp.", "need": ["because", "since", "so"], "hint": "Nhớ nối lý do bằng \"because\" / \"since\". Một câu chỉ nêu cảm xúc mà không có lý do thì chưa thuyết phục."}, {"key": "example", "n": "③ Ví dụ của riêng em", "sec": "EXAMPLE", "min": 15, "idea": "Một chuyện THẬT đã xảy ra với em hoặc người em biết.", "task": "Viết 1–2 câu kể chuyện thật. Dùng thì QUÁ KHỨ. Bắt đầu bằng \"Last year…\" / \"Take my case —\".", "model": "Last year my motorbike broke down, and I was glad I had saved for a rainy day.", "modelvi": "Năm ngoái xe tôi hỏng, và tôi mừng vì đã để dành phòng thân.", "need": ["i", "my"], "hint": "Đây là phần làm bài của em KHÁC mọi người. Ví dụ càng cụ thể (số tiền, thời gian, chuyện gì) càng thuyết phục."}, {"key": "idiom", "n": "④ Chốt lại bằng thành ngữ", "sec": "IDIOM", "min": 10, "idea": "Kết bài bằng 1 thành ngữ ở Tầng 3.", "task": "Viết 1 câu kết. Dùng \"At the end of the day, …\" + 1 idiom.", "model": "At the end of the day, you should save for a rainy day — but life is short too.", "modelvi": "Suy cho cùng, bạn nên để dành phòng thân — nhưng đời cũng ngắn lắm.", "need": ["at the end of the day", "all in all", "in short"], "hint": "Câu kết nên nhắc lại ý kiến ở phần ① để bài khép kín."}];
+const TIER_WORDS={"T1": ["broke", "splurge", "splurged", "affordable", "savings", "saving", "rip-off"], "T2": ["peace of mind", "stresses me out", "stress me out", "feel guilty", "guilty", "torn between", "worth every penny"], "T3": ["save for a rainy day", "saved for a rainy day", "paycheck to paycheck", "break the bank", "life is short", "treat yourself", "treat myself", "retail therapy"]};
+const LINKERS=["because", "since", "so", "but", "however", "although", "at the end of the day", "for example", "take my case", "first", "second"];
+const PERSONAL=["my ", "last year", "last month", "last week", "when i", "take my case", "i had", "i bought", "i spent", "i saved", "i splurged", "i paid", "i went", "i got", "my cousin", "my friend"];
+const GRAMMAR_CHECKS=[{"re": "\\bi think (save|spend|buy|have|be)\\b", "msg": "Sau \"I think\" phải là một mệnh đề đủ chủ ngữ + động từ chia.", "fix": "\"I think saving money is good.\" (không phải \"I think save money is good\")"}, {"re": "\\b(regret|enjoy|avoid|finish|practice)\\s+to\\s+\\w+", "msg": "Sau regret / enjoy / avoid… dùng V-ing, KHÔNG dùng \"to V\".", "fix": "\"I regret buying it.\" (không phải \"I regret to buy it\")"}, {"re": "\\b(want|need|decide|hope|plan)\\s+\\w+ing\\b", "msg": "Sau want / need / decide / hope / plan dùng \"to V\", không dùng V-ing.", "fix": "\"I want to save money.\" (không phải \"I want saving money\")"}, {"re": "\\bshould\\s+\\w+ed\\b", "msg": "Sau \"should\" dùng động từ NGUYÊN THỂ, hoặc \"should have + V3\" nếu nói chuyện đã qua.", "fix": "\"I should save.\" hoặc \"I should have saved.\""}, {"re": "\\bmany (money|time|information|advice)\\b", "msg": "\"money\" là danh từ KHÔNG đếm được — dùng \"much\", không dùng \"many\".", "fix": "\"much money\" / \"a lot of money\""}, {"re": "\\ba savings?\\b(?! account)", "msg": "\"savings\" (tiền tiết kiệm) luôn ở dạng số nhiều, không có \"a\".", "fix": "\"my savings\" / \"some savings\""}, {"re": "\\bfeel\\s+(peace of mind|confidence|stress)\\b", "msg": "Sau \"feel\" dùng TÍNH TỪ. Với danh từ hãy dùng \"gives me…\".", "fix": "\"It gives me peace of mind.\" hoặc \"I feel calm.\""}, {"re": "\\bdepend\\s+(on\\s+)?of\\b", "msg": "Đúng là \"depend ON\", không phải \"depend of\".", "fix": "\"It depends on…\""}, {"re": "\\bin\\s+the\\s+other\\s+hand\\b", "msg": "Đúng là \"ON the other hand\".", "fix": "\"On the other hand, …\""}, {"re": "\\bi'?m agree\\b", "msg": "\"agree\" là ĐỘNG TỬ — không dùng \"am/is/are\" trước nó.", "fix": "\"I agree.\" (không phải \"I am agree\")"}];
 
 const $ = s=>document.querySelector(s);
 function h(tag,attrs={},html){const e=document.createElement(tag);for(const k in attrs){if(k==='class')e.className=attrs[k];else e.setAttribute(k,attrs[k]);}if(html!=null)e.innerHTML=html;return e;}
@@ -831,7 +849,7 @@ async function runQueue(){
   }finally{BUSY=false;updateCloud();runQueue();}
 }
 
-/* ═══ QUIZ ═══ */
+/* ═══ QUIZ CHUNG ═══ */
 const QUIZ=load('quiz',{});
 function qstate(name,n){if(!QUIZ[name]||QUIZ[name].length!==n)QUIZ[name]=Array(n).fill(null);return QUIZ[name];}
 function renderMC(box,items,name,opts){
@@ -849,14 +867,14 @@ function renderMC(box,items,name,opts){
       b.onclick=()=>{
         if(arr[i]==null){arr[i]=j;store('quiz',QUIZ);}
         [...ob.children].forEach(x=>x.classList.remove('correct','wrong'));
-        if(j===it.a){b.classList.add('correct');fb.className='qfb ok';fb.innerHTML='✅ Đúng rồi!'+(it.x?'<br>💬 '+esc(it.x):'');speak(it.o[it.a]);}
-        else{b.classList.add('wrong');ob.children[it.a].classList.add('correct');fb.className='qfb bad';fb.innerHTML='❌ Chưa đúng. Đáp án: <b>'+esc(it.o[it.a])+'</b>'+(it.x?'<br>💬 '+esc(it.x):'');}
+        if(j===it.a){b.classList.add('correct');fb.className='qfb ok';fb.innerHTML='✅ Đúng rồi!'+(it.x?'<br>💬 '+it.x:'');speak(it.o[it.a]);}
+        else{b.classList.add('wrong');ob.children[it.a].classList.add('correct');fb.className='qfb bad';fb.innerHTML='❌ Chưa đúng. Đáp án: <b>'+esc(it.o[it.a])+'</b>'+(it.x?'<br>💬 '+it.x:'');}
         recalcProgress();
       };
       if(arr[i]!=null){if(j===it.a)b.classList.add('correct');else if(j===arr[i])b.classList.add('wrong');}
       ob.appendChild(b);
     });
-    if(arr[i]!=null){fb.className='qfb '+(arr[i]===it.a?'ok':'bad');fb.innerHTML=(arr[i]===it.a?'✅ Đúng rồi!':'❌ Đáp án: <b>'+esc(it.o[it.a])+'</b>')+(it.x?'<br>💬 '+esc(it.x):'');}
+    if(arr[i]!=null){fb.className='qfb '+(arr[i]===it.a?'ok':'bad');fb.innerHTML=(arr[i]===it.a?'✅ Đúng rồi!':'❌ Đáp án: <b>'+esc(it.o[it.a])+'</b>')+(it.x?'<br>💬 '+it.x:'');}
     c.appendChild(ob);c.appendChild(fb);box.appendChild(c);
   });
 }
@@ -907,6 +925,7 @@ function renderVoicePicker(){
 /* ═══ BƯỚC 1 — TỪ VỰNG ═══ */
 const PLAYED=load('played',[]);
 function vocabTotal(){return TIER1.length+TIER2.length+TIER3.length;}
+function allWords(){return [...TIER1,...TIER2,...TIER3];}
 function tierCard(it,gi,idx){
   const key='t'+gi+'_'+idx;
   const c=h('div',{class:'vcard'});
@@ -918,34 +937,28 @@ function tierCard(it,gi,idx){
   head.appendChild(h('span',{class:'vbadge','data-vb':key},PLAYED.includes(key)?'🔊 Đã nghe':'🆕'));
   c.appendChild(head);
   c.appendChild(h('div',{class:'vvi'},'👉 '+esc(it.vi)));
-
   const ex=h('div',{class:'vexp'});
   ex.appendChild(h('div',{class:'vexph'},'🧩 Cụm thường đi cùng:'));
   it.exp.forEach(([en,vi])=>{
     const row=h('div',{class:'vexprow'});
     const b=h('button',{class:'chipb'},esc(en));
     b.onclick=()=>speak(en);
-    row.appendChild(b);
-    row.appendChild(h('span',{class:'vexpvi'},'= '+esc(vi)));
+    row.appendChild(b);row.appendChild(h('span',{class:'vexpvi'},'= '+esc(vi)));
     ex.appendChild(row);
   });
   c.appendChild(ex);
-
   const exb=h('div',{class:'vex'});
   exb.appendChild(h('div',{},'💬 <i>'+esc(it.ex)+'</i>'));
   exb.appendChild(h('div',{class:'vexvi'},'→ '+esc(it.exvi)));
   c.appendChild(exb);
-
   c.appendChild(h('div',{class:'vuse'},'📍 <b>Dùng khi nào:</b> '+esc(it.use)));
-
   const row=h('div',{class:'recrow'});
   const b1=h('button',{class:'b sm'},'🔊 Nghe từ');
   b1.onclick=()=>{speak(it.w);if(!PLAYED.includes(key)){PLAYED.push(key);store('played',PLAYED);
     c.querySelector('[data-vb]').textContent='🔊 Đã nghe';recalcProgress();}};
   const b2=h('button',{class:'b sm'},'🗣️ Nghe câu ví dụ');
   b2.onclick=()=>speak(it.ex);
-  row.appendChild(b1);row.appendChild(b2);
-  c.appendChild(row);
+  row.appendChild(b1);row.appendChild(b2);c.appendChild(row);
   return c;
 }
 function renderS1(){
@@ -961,10 +974,8 @@ function renderS1(){
     box.appendChild(hd);
     t.items.forEach((it,i)=>box.appendChild(tierCard(it,gi,i)));
   });
-
   const db=$('#s1Drill');db.innerHTML='';
-  const DRILL=[...TIER1,...TIER2,...TIER3];
-  DRILL.forEach((d,i)=>{
+  allWords().forEach((d,i)=>{
     const c=h('div',{class:'vcard'});
     const head=h('div',{class:'vhead'});
     head.appendChild(h('span',{class:'vword'},(i+1)+'. '+esc(d.w)));
@@ -975,7 +986,6 @@ function renderS1(){
       fileBase:'B1-tu-'+String(i+1).padStart(2,'0')+'-'+d.w.replace(/[^a-zA-Z]/g,'').slice(0,16),onSent:recalcProgress}));
     db.appendChild(c);
   });
-
   renderMatch($('#s1wMatch'),W_MATCH,'wmatch');
   renderMC($('#s1wMC'),W_MC,'wmc',{prefix:1});
   renderMatch($('#s1eMatch'),E_MATCH,'ematch');
@@ -985,12 +995,10 @@ function renderS1(){
   renderMC($('#s1build'),BUILDER,'build',{prefix:1});
 }
 function drillSent(){let n=0;for(let i=0;i<vocabTotal();i++)if(RESULTS['drill_'+i]&&RESULTS['drill_'+i].sent)n++;return n;}
-function drillAvg(){
-  const ss=[];for(let i=0;i<vocabTotal();i++){const r=RESULTS['drill_'+i];if(r&&r.score!=null)ss.push(r.score);}
-  return ss.length?Math.round(ss.reduce((a,b)=>a+b,0)/ss.length):null;
-}
+function drillAvg(){const ss=[];for(let i=0;i<vocabTotal();i++){const r=RESULTS['drill_'+i];if(r&&r.score!=null)ss.push(r.score);}
+  return ss.length?Math.round(ss.reduce((a,b)=>a+b,0)/ss.length):null;}
 
-/* ═══ BƯỚC 2 ═══ */
+/* ═══ BƯỚC 2 — MẪU CÂU & NGỮ PHÁP CẢM XÚC / HỐI HẬN ═══ */
 function renderS2(){
   const u=$('#s2Upgrade');u.innerHTML='';
   const tb=h('table',{});
@@ -1004,36 +1012,54 @@ function renderS2(){
   u.appendChild(tb);
 
   const g=$('#s2Rules');g.innerHTML='';
-  const tb2=h('table',{});
-  tb2.appendChild(h('tr',{},'<th>Điểm ngữ pháp</th><th>Công thức</th><th>Ví dụ + nghĩa</th>'));
-  GRAMMAR_RULES.forEach(r=>tb2.appendChild(h('tr',{},'<td><b>'+r[0]+'</b></td><td>'+r[1]+'</td>'
-    +'<td>'+r[2]+'<br><span class="vexvi">→ '+esc(r[3])+'</span></td>')));
-  g.appendChild(tb2);
+  GRAMMAR_RULES.forEach(r=>{
+    const c=h('div',{class:'gcard'});
+    c.appendChild(h('div',{class:'gname'},r[0]));
+    c.appendChild(h('div',{class:'gform'},r[1]));
+    const ex=h('div',{class:'vex'});
+    ex.appendChild(h('div',{},'💬 '+r[2]));
+    ex.appendChild(h('div',{class:'vexvi'},'→ '+esc(r[3])));
+    c.appendChild(ex);
+    c.appendChild(h('div',{class:'vuse'},'📍 '+esc(r[4])));
+    const b=h('button',{class:'b sm'},'🔊 Nghe câu');
+    b.onclick=()=>speak(r[2].replace(/<[^>]+>/g,''));
+    c.appendChild(b);
+    g.appendChild(c);
+  });
 
-  renderMC($('#s2Dialog'),DIALOG_BLANKS.map((d,i)=>({q:d.before+' ____ '+d.after,o:d.o,a:d.a,x:d.x})),'dlg',{prefix:1});
-  renderMatch($('#s2Match'),G2_MATCH,'g2match');
+  renderMC($('#s2Dialog'),DIALOG_BLANKS.map(d=>({q:d.before+' ____ '+d.after,o:d.o,a:d.a,x:d.x})),'dlg',{prefix:1});
 
-  const rb=$('#s2Rewrite');rb.innerHTML='';
-  const RW=load('rewrite',Array(REWRITE.length).fill(''));
-  REWRITE.forEach((it,i)=>{
-    const c=h('div',{class:'qcard'});
-    c.appendChild(h('div',{class:'qq'},'<b>Câu '+(i+1)+'.</b> '+esc(it.q)));
-    const ta=h('input',{type:'text',placeholder:'Viết lại câu…',style:'width:100%'});
-    ta.value=RW[i]||'';
-    const fb=h('div',{class:'qfb'});
-    const row=h('div',{class:'recrow'});
-    const bk=h('button',{class:'b sm'},'✓ Kiểm tra');
-    bk.onclick=()=>{
-      RW[i]=ta.value;store('rewrite',RW);
-      const norm=normText(ta.value);
-      if(it.a.some(x=>norm===x)){fb.className='qfb ok';fb.innerHTML='✅ Chính xác!<br>💬 '+esc(it.x);speak(it.show.replace(/<[^>]+>/g,''));}
-      else{fb.className='qfb bad';fb.innerHTML='Gần đúng rồi. Đáp án: '+it.show+'<br><span class="vexvi">→ '+esc(it.showvi)+'</span><br>💬 '+esc(it.x);}
-      recalcProgress();
-    };
-    const bs=h('button',{class:'b sm'},'🔊 Nghe đáp án');
-    bs.onclick=()=>speak(it.show.replace(/<[^>]+>/g,''));
-    row.appendChild(bk);row.appendChild(bs);
-    c.appendChild(ta);c.appendChild(row);c.appendChild(fb);rb.appendChild(c);
+  /* Bài 2 — How would he/she feel? */
+  const fb=$('#s2Feel');fb.innerHTML='';
+  const arr=qstate('feel',FEEL_Q.length);
+  FEEL_Q.forEach((it,i)=>{
+    const c=h('div',{class:'storycard'});
+    c.appendChild(h('div',{class:'storyhead'},it.e+' <b>'+esc(it.name)+'</b>'));
+    c.appendChild(h('div',{class:'storytext'},esc(it.story)));
+    c.appendChild(h('div',{class:'vexvi'},'→ '+esc(it.storyvi)));
+    const br=h('div',{class:'recrow',style:'margin:6px 0'});
+    const bs=h('button',{class:'b sm'},'🔊 Nghe tình huống');
+    bs.onclick=()=>speak(it.story);
+    br.appendChild(bs);c.appendChild(br);
+    c.appendChild(h('div',{class:'storyq'},'❓ '+esc(it.q)));
+    const ob=h('div',{class:'qopts'});
+    const fbk=h('div',{class:'qfb'});
+    it.o.forEach((o,j)=>{
+      const b=h('button',{class:'qopt'},esc(o));
+      b.onclick=()=>{
+        if(arr[i]==null){arr[i]=j;store('quiz',QUIZ);}
+        [...ob.children].forEach(x=>x.classList.remove('correct','wrong'));
+        if(j===it.a){b.classList.add('correct');fbk.className='qfb ok';fbk.innerHTML='✅ Đúng rồi!<br>💬 '+it.x;speak(it.o[it.a]);}
+        else{b.classList.add('wrong');ob.children[it.a].classList.add('correct');fbk.className='qfb bad';
+          fbk.innerHTML='❌ Chưa đúng. Đáp án: <b>'+esc(it.o[it.a])+'</b><br>💬 '+it.x;}
+        recalcProgress();
+      };
+      if(arr[i]!=null){if(j===it.a)b.classList.add('correct');else if(j===arr[i])b.classList.add('wrong');}
+      ob.appendChild(b);
+    });
+    if(arr[i]!=null){fbk.className='qfb '+(arr[i]===it.a?'ok':'bad');
+      fbk.innerHTML=(arr[i]===it.a?'✅ Đúng rồi!':'❌ Đáp án: <b>'+esc(it.o[it.a])+'</b>')+'<br>💬 '+it.x;}
+    c.appendChild(ob);c.appendChild(fbk);fb.appendChild(c);
   });
 
   const sb=$('#s2Shadow');sb.innerHTML='';
@@ -1049,156 +1075,416 @@ function renderS2(){
 }
 function shadowSent(){let n=0;SHADOW.forEach((_,i)=>{if(RESULTS['shadow_'+i]&&RESULTS['shadow_'+i].sent)n++;});return n;}
 
-/* ═══ BƯỚC 3 ═══ */
+/* ═══ BƯỚC 3 — NÓI ═══ */
 function renderS3(){
-  const box=$('#s3Sides');box.innerHTML='';
-  [['💰 PHE SAVE — "Save for a rainy day"',SIDE_SAVE,'tb3'],['🎁 PHE SPEND — "Life is short"',SIDE_SPEND,'tb2']].forEach(([nm,rows,cls])=>{
+  /* MỤC 1 — trả lời câu hỏi */
+  const b1=$('#s3Part1');b1.innerHTML='';
+  SPEAK_Q.forEach((q,i)=>{
+    const c=h('div',{class:'card'});
+    c.appendChild(h('div',{class:'qkind'+(q.kind==='dài'?' klong':'')},
+      q.kind==='dài'?'📙 Câu DÀI · kiểu IELTS Speaking Part 3 · '+q.sec+' giây':'📗 Câu NGẮN · 2–3 câu trả lời · '+q.sec+' giây'));
+    c.appendChild(h('div',{class:'storyq'},'❓ '+esc(q.q)));
+    c.appendChild(h('div',{class:'vexvi'},'→ '+esc(q.qvi)));
+    const br=h('div',{class:'recrow',style:'margin:7px 0'});
+    const bq=h('button',{class:'b sm'},'🔊 Nghe câu hỏi');
+    bq.onclick=()=>speak(q.q);
+    br.appendChild(bq);c.appendChild(br);
+
+    c.appendChild(h('div',{class:'tipbox'},'🧭 <b>Cách trả lời:</b><br>'+esc(q.tips).replace(/\n/g,'<br>')));
+
+    const mb=h('div',{});
+    const brm=h('div',{class:'recrow',style:'margin:7px 0'});
+    const bm=h('button',{class:'b sm'},'👀 Xem câu trả lời mẫu');
+    bm.onclick=()=>{
+      bm.disabled=true;
+      let chips='';
+      q.uses.forEach(w=>{chips+='<button class="chipb" data-say="'+esc(w)+'">'+esc(w)+'</button> ';});
+      mb.innerHTML='<div class="scriptbox"><b>Câu trả lời mẫu:</b><br>'+esc(q.model)
+        +'<br><span class="vexvi">→ '+esc(q.modelvi)+'</span>'
+        +'<div class="useline">📌 Từ vựng đã dùng: '+chips+'</div></div>';
+      mb.querySelectorAll('[data-say]').forEach(x=>x.onclick=()=>speak(x.getAttribute('data-say')));
+      const bp=h('button',{class:'b sm',style:'margin-top:6px'},'🔊 Nghe câu mẫu');
+      bp.onclick=()=>speak(q.model);
+      mb.appendChild(bp);
+    };
+    brm.appendChild(bm);c.appendChild(brm);c.appendChild(mb);
+
+    c.appendChild(makeRecorder({key:'sq_'+i,sample:q.model,label:'Bước 3 – Trả lời câu '+(i+1)+' ('+q.kind+')',
+      maxSec:q.sec,retries:3,soft:true,fileBase:'B3-cauhoi-'+(i+1),onSent:recalcProgress}));
+    b1.appendChild(c);
+  });
+
+  /* MỤC 2 — tranh luận */
+  $('#aiOpinion').textContent=AI_OPINION;
+  $('#aiOpinionVi').textContent='→ '+AI_OPINION_VI;
+  $('#playAI').onclick=()=>speak(AI_OPINION);
+
+  const ib=$('#s3Ideas');ib.innerHTML='';
+  [['💰 Ý cho phe ĐỒNG Ý (nên tiết kiệm)',SIDE_SAVE,'tb3'],
+   ['🎁 Ý cho phe PHẢN BÁC (nên tiêu một chút)',SIDE_SPEND,'tb2']].forEach(([nm,rows,cls])=>{
     const hd=h('div',{class:'tierhead'});
     hd.appendChild(h('span',{class:'tierbadge '+cls},esc(nm)));
-    box.appendChild(hd);
+    ib.appendChild(hd);
     const t=h('table',{});
-    t.appendChild(h('tr',{},'<th>Ý</th><th>Cảm xúc / Idiom</th><th>Ví dụ + nghĩa</th><th></th>'));
+    t.appendChild(h('tr',{},'<th>Ý</th><th>Từ nên dùng</th><th>Ví dụ + nghĩa</th><th></th>'));
     rows.forEach(r=>{
       const tr=h('tr',{},'<td>'+esc(r[0])+'</td><td><b>'+esc(r[1])+'</b></td>'
         +'<td><i>'+esc(r[2])+'</i><br><span class="vexvi">→ '+esc(r[3])+'</span></td>');
       const td=h('td',{});const b=h('button',{class:'b sm'},'🔊');b.onclick=()=>speak(r[2]);
       td.appendChild(b);tr.appendChild(td);t.appendChild(tr);
     });
-    const w=h('div',{class:'tbl'});w.appendChild(t);box.appendChild(w);
+    const w=h('div',{class:'tbl'});w.appendChild(t);ib.appendChild(w);
   });
-  renderMC($('#s3Q'),SIDE_Q.map(x=>({q:x.q,o:['PHE SAVE','PHE SPEND'],a:x.a,x:x.x})),'side',{prefix:1});
-}
 
-/* ═══ BƯỚC 4 ═══ */
-function renderS4(){
-  renderMC($('#s4Map'),MINDMAP.map(([w,t])=>({q:w,o:['TẦNG 1 · Words','TẦNG 2 · Emotions','TẦNG 3 · Idioms'],a:t,
-    x:['Từ đơn đời thường.','Cụm diễn tả cảm xúc.','Thành ngữ của người bản xứ.'][t]})),'map',{prefix:1});
-  renderMC($('#s4MC'),B4_MC,'b4',{prefix:1});
-  const nb=$('#s4Note');
-  const NOTE=load('note',{w:'',e:'',i:'',arg:'',g:''});
-  nb.innerHTML='';
-  [['w','Words tôi sẽ dùng'],['e','Emotions tôi sẽ dùng'],['i','Idioms tôi sẽ dùng'],
-   ['arg','Lập luận chính của tôi'],['g','Cấu trúc ngữ pháp tôi sẽ dùng']].forEach(([k,lb])=>{
-    const row=h('div',{style:'margin:9px 0'});
-    row.appendChild(h('div',{style:'font-weight:600;font-size:14px;margin-bottom:3px'},esc(lb)));
-    const inp=h('input',{type:'text',style:'width:100%'});
-    inp.value=NOTE[k]||'';
-    inp.oninput=()=>{NOTE[k]=inp.value;store('note',NOTE);recalcProgress();};
-    row.appendChild(inp);nb.appendChild(row);
-  });
-}
-function noteFilled(){const n=load('note',{});return ['w','e','i','arg','g'].filter(k=>(n[k]||'').trim()).length;}
-
-/* ═══ BƯỚC 5 ═══ */
-function renderS5(){
-  const sb=$('#s5Rec');sb.innerHTML='';
-  [['for','Nói ý ỦNG HỘ AI',MODEL_FOR,MODEL_FOR_VI],
+  const db=$('#s3Debate');db.innerHTML='';
+  [['for','Nói ý ĐỒNG Ý với AI',MODEL_FOR,MODEL_FOR_VI],
    ['ag','Nói ý PHẢN BÁC AI',MODEL_AGAINST,MODEL_AGAINST_VI]].forEach(([k,title,model,modelvi],i)=>{
     const c=h('div',{class:'card'});
-    c.appendChild(h('h3',{style:'margin-top:0'},'Đoạn '+(i+1)+' · '+esc(title)+' <span class="hint" style="font-weight:400">(30–45 giây)</span>'));
-    c.appendChild(h('div',{class:'frame'},'💡 <b>Câu mẫu để nghe và bắt chước:</b><br><i>'+esc(model)+'</i>'
-      +'<br><span class="vexvi">→ '+esc(modelvi)+'</span>'));
-    c.appendChild(makeRecorder({key:'speak_'+k,sample:model,label:'Bước 5 – '+title,maxSec:60,retries:3,soft:true,
-      fileBase:'B5-noi-'+k,onSent:recalcProgress}));
-    sb.appendChild(c);
-  });
-
-  const W=load('write',{for:'',ag:''});
-  const wb=$('#s5Write');wb.innerHTML='';
-  [['for','Phần ỦNG HỘ (2–3 câu)','I see where the AI is coming from. Saving money gives me ____ because ____.',MODEL_FOR,MODEL_FOR_VI],
-   ['ag','Phần PHẢN BÁC (2–3 câu)',"I'm not sure I agree, though. If you never spend anything, you will ____. At the end of the day, ____.",MODEL_AGAINST,MODEL_AGAINST_VI]
-  ].forEach(([k,title,frame,model,modelvi])=>{
-    const c=h('div',{class:'card'});
-    c.appendChild(h('h3',{style:'margin-top:0'},esc(title)));
-    c.appendChild(h('div',{class:'frame'},'🧱 <b>Khung:</b> <i>'+esc(frame)+'</i>'));
-    const ta=h('textarea',{placeholder:'Em viết ở đây…'});
-    ta.value=W[k]||'';
-    const wc=h('div',{class:'wc'},'0 từ');
-    function cnt(){const n=ta.value.trim()?ta.value.trim().split(/\s+/).length:0;wc.textContent=n+' từ';return n;}
-    const mbox=h('div',{});
-    const row=h('div',{class:'recrow'});
-    const bm=h('button',{class:'b sm'},'👀 Xem bài mẫu');
-    bm.onclick=()=>{bm.disabled=true;mbox.innerHTML='<div class="scriptbox"><b>Bài mẫu:</b><br>'+esc(model)
-      +'<br><span class="vexvi">→ '+esc(modelvi)+'</span></div>';};
-    const bs=h('button',{class:'b sm'},'🔊 Nghe mẫu');
-    bs.onclick=()=>speak(model);
-    row.appendChild(bm);row.appendChild(bs);
-    function chk(){bm.disabled=cnt()<15;bm.title=cnt()<15?'Em viết đủ 15 từ sẽ mở được bài mẫu':'';}
-    ta.oninput=()=>{W[k]=ta.value;store('write',W);chk();recalcProgress();};
-    chk();
-    c.appendChild(ta);c.appendChild(wc);c.appendChild(row);c.appendChild(mbox);wb.appendChild(c);
-  });
-
-  const CK=load('ck5',{});
-  const cb=$('#s5Check');cb.innerHTML='';
-  ["Có mẫu câu ủng hộ (I see where… / That's so true…)","Có mẫu câu phản bác (I'm not sure I agree…)",
-   'Có ít nhất 1 cụm cảm xúc (Tầng 2)','Có ít nhất 1 idiom (Tầng 3)','Có 1 ví dụ đời thực của riêng em',
-   'Có ít nhất 1 cấu trúc ngữ pháp ở Bước 2','Mỗi phần dài 2–3 câu'].forEach((t,i)=>{
-    const l=h('label',{class:'chk'});
-    const ip=h('input',{type:'checkbox'});
-    if(CK['c'+i])ip.checked=true;
-    ip.onchange=()=>{CK['c'+i]=ip.checked;store('ck5',CK);};
-    l.appendChild(ip);l.appendChild(h('span',{},esc(t)));cb.appendChild(l);
+    c.appendChild(h('h3',{style:'margin-top:0'},(i+1)+'. '+esc(title)+' <span class="hint" style="font-weight:400">(30–45 giây)</span>'));
+    c.appendChild(h('div',{class:'frame'},'💡 <b>Câu mẫu:</b><br><i>'+esc(model)+'</i><br><span class="vexvi">→ '+esc(modelvi)+'</span>'));
+    c.appendChild(makeRecorder({key:'speak_'+k,sample:model,label:'Bước 3 – '+title,maxSec:60,retries:3,soft:true,
+      fileBase:'B3-tranhluan-'+k,onSent:recalcProgress}));
+    db.appendChild(c);
   });
 }
-function writeWords(){const W=load('write',{for:'',ag:''});return ((W.for||'')+' '+(W.ag||'')).trim().split(/\s+/).filter(Boolean).length;}
+function sqSent(){let n=0;SPEAK_Q.forEach((_,i)=>{if(RESULTS['sq_'+i]&&RESULTS['sq_'+i].sent)n++;});return n;}
+function debateSent(){return (RESULTS['speak_for']&&RESULTS['speak_for'].sent?1:0)+(RESULTS['speak_ag']&&RESULTS['speak_ag'].sent?1:0);}
 
-/* ═══ BƯỚC 6 ═══ */
-function renderS6(){
-  const sb=$('#s6Scripts');sb.innerHTML='';
-  SCRIPTS.forEach(s=>{
-    const c=h('div',{class:'card'});
-    c.appendChild(h('h3',{style:'margin-top:0'},esc(s.name)));
-    c.appendChild(h('div',{class:'scriptbox'},esc(s.en)+'<br><span class="vexvi">→ '+esc(s.vi)+'</span>'));
-    c.appendChild(h('div',{class:'hint',style:'margin:6px 0 0'},'🔑 Từ khoá cần nghe ra: <b>'+esc(s.keys)+'</b>'));
+/* ═══════ BƯỚC 4 — VIẾT: ý chính → khai triển → CHẤM SƠ BỘ ═══════ */
+const WRITE=load('write4',{});
+
+function wText(k){return (WRITE[k]||'').trim();}
+function wAll(){return WRITE_PARTS.map(p=>wText(p.key)).filter(Boolean).join(' ');}
+function wWords(){const t=wAll();return t?t.split(/\s+/).length:0;}
+function wPartsDone(){return WRITE_PARTS.filter(p=>wText(p.key).split(/\s+/).filter(Boolean).length>=p.min).length;}
+/* Bản A: đơn vị đếm là 4 phần bài viết. Bản mind map ghi đè hai hàm này. */
+function writeUnitTotal(){return WRITE_PARTS.length;}
+function writeUnitMsg(n){return 'viết đủ '+n+' phần còn lại của bài viết';}
+
+/* ── Bộ chấm sơ bộ ── */
+function gradeWriting(){
+  const low=' '+wAll().toLowerCase().replace(/[’']/g,"'")+' ';
+  const res={grammar:[],logic:[],vocab:[],persuade:[],gaps:[],good:[]};
+
+  /* 1 · NGỮ PHÁP */
+  GRAMMAR_CHECKS.forEach(g=>{
+    const re=new RegExp(g.re,'i');
+    const m=low.match(re);
+    if(m)res.grammar.push({found:m[0].trim(),msg:g.msg,fix:g.fix});
+  });
+  /* viết hoa đầu câu + dấu chấm cuối */
+  WRITE_PARTS.forEach(p=>{
+    const t=wText(p.key);
+    if(!t)return;
+    if(/^[a-z]/.test(t))res.grammar.push({found:p.n,msg:'Câu phải viết HOA chữ cái đầu.',fix:'“'+t.charAt(0).toUpperCase()+t.slice(1,28)+'…”'});
+    if(!/[.!?]$/.test(t))res.grammar.push({found:p.n,msg:'Thiếu dấu chấm cuối câu.',fix:'Thêm dấu “.” ở cuối.'});
+    if(/\bi\b/.test(t))res.grammar.push({found:p.n,msg:'Đại từ “I” luôn viết HOA.',fix:'“I think…” không phải “i think…”'});
+  });
+
+  /* 2 · ĐỦ Ý / ĐÁP ỨNG YÊU CẦU */
+  WRITE_PARTS.forEach(p=>{
+    const n=wText(p.key).split(/\s+/).filter(Boolean).length;
+    if(n===0)res.logic.push('Phần <b>'+p.n+'</b> còn trống.');
+    else if(n<p.min)res.logic.push('Phần <b>'+p.n+'</b> mới '+n+' từ — nên ít nhất '+p.min+' từ.');
+  });
+
+  /* 3 · TỪ NỐI — tính logic */
+  const links=LINKERS.filter(l=>low.includes(' '+l+' ')||low.includes(' '+l+','));
+  if(links.length===0)res.logic.push('Bài chưa có <b>từ nối</b> nào. Thêm <i>because / so / but / at the end of the day</i> để ý này dẫn sang ý kia.');
+  else res.good.push('Có '+links.length+' từ nối ('+links.slice(0,4).join(', ')+') — ý nối nhau mạch lạc.');
+
+  /* 4 · TỪ VỰNG 3 TẦNG */
+  const hit={};
+  ['T1','T2','T3'].forEach(t=>{hit[t]=TIER_WORDS[t].filter(w=>low.includes(w.toLowerCase()));});
+  ['T1','T2','T3'].forEach(t=>{
+    const nm={T1:'Tầng 1 (Words)',T2:'Tầng 2 (Emotions)',T3:'Tầng 3 (Idioms)'}[t];
+    if(hit[t].length===0)res.vocab.push('Chưa dùng từ nào của <b>'+nm+'</b>.');
+    else res.good.push('Dùng '+nm+': '+hit[t].map(w=>'<b>'+w+'</b>').join(', '));
+  });
+
+  /* 5 · VÍ DỤ CÁ NHÂN — tính thuyết phục */
+  const hasPersonal=PERSONAL.some(p=>low.includes(p));
+  const hasPast=/\b(was|were|had|bought|spent|saved|broke|went|got|paid)\b/.test(low);
+  const hasNumber=/\b\d|\bmillion\b|\bthousand\b/.test(low);
+  if(!hasPersonal)res.persuade.push('Chưa thấy <b>ví dụ của riêng em</b>. Bài sẽ thuyết phục hơn nhiều nếu kể một chuyện thật.');
+  else if(!hasPast)res.persuade.push('Em có nhắc đến mình, nhưng chưa dùng <b>thì quá khứ</b> để kể một chuyện đã xảy ra.');
+  else res.good.push('Có ví dụ cá nhân kể bằng thì quá khứ — rất thuyết phục.');
+  if(hasNumber)res.good.push('Có con số cụ thể — chi tiết này làm bài đáng tin hơn.');
+  else res.persuade.push('Thử thêm <b>con số cụ thể</b> (bao nhiêu tiền, bao lâu) — người đọc dễ tin hơn.');
+
+  /* 6 · KHE HỞ LẬP LUẬN */
+  const sideSave=/(sav|rainy day|peace of mind|secure|emergency)/.test(low);
+  const sideSpend=/(spend|treat|life is short|retail therapy|enjoy|splurg)/.test(low);
+  if(sideSave&&!sideSpend)
+    res.gaps.push('Bài mới nói phía <b>TIẾT KIỆM</b>. Người phản đối sẽ hỏi: <i>“Thế không bao giờ tự thưởng à?”</i> → thêm 1 câu thừa nhận phía kia: <i>“Of course, a small treat sometimes won\'t break the bank.”</i>');
+  if(sideSpend&&!sideSave)
+    res.gaps.push('Bài mới nói phía <b>TIÊU TIỀN</b>. Người phản đối sẽ hỏi: <i>“Thế lúc khẩn cấp thì sao?”</i> → thêm 1 câu: <i>“I still keep some savings for a rainy day.”</i>');
+  if(sideSave&&sideSpend)res.good.push('Bài nhắc được <b>cả hai phía</b> — lập luận cân bằng, khó bị bắt bẻ.');
+  if(!/\b(but|however|although|though|on the other hand)\b/.test(low))
+    res.gaps.push('Chưa có từ chỉ <b>tương phản</b> (but / however / although). Bài một chiều dễ bị coi là chưa cân nhắc kỹ.');
+  const sentences=wAll().split(/[.!?]+/).filter(s=>s.trim().length>3).length;
+  if(sentences&&sentences<4)res.gaps.push('Bài mới có '+sentences+' câu — hơi ngắn để thuyết phục. Nên 5–7 câu.');
+
+  /* Điểm tổng */
+  const issues=res.grammar.length+res.logic.length+res.vocab.length+res.persuade.length+res.gaps.length;
+  let band;
+  if(issues===0)band={t:'Rất tốt',cls:'okscore',e:'🌟'};
+  else if(issues<=3)band={t:'Khá — chỉnh vài chỗ là ổn',cls:'okscore',e:'🙂'};
+  else if(issues<=7)band={t:'Đạt — còn vài điểm cần sửa',cls:'midscore',e:'💪'};
+  else band={t:'Cần viết lại kỹ hơn',cls:'badscore',e:'📝'};
+  res.band=band;res.issues=issues;res.sentences=sentences;res.words=wWords();
+  return res;
+}
+
+function renderWriteFeedback(){
+  const box=$('#writeFb');if(!box)return;
+  if(wWords()<10){box.hidden=true;return;}
+  const r=gradeWriting();
+  const sec=(icon,title,arr,extra)=>{
+    if(!arr.length)return '';
+    return '<div class="fbsec"><div class="fbhead">'+icon+' <b>'+title+'</b> ('+arr.length+')</div><ul>'
+      +arr.map(x=>'<li>'+x+'</li>').join('')+'</ul>'+(extra||'')+'</div>';
+  };
+  let html='<div class="scorehead">'+r.band.e+' <b>Nhận xét sơ bộ: '+r.band.t+'</b> '
+    +'<span class="hint">('+r.words+' từ · '+r.sentences+' câu · '+r.issues+' điểm cần lưu ý)</span></div>'
+    +'<div class="hint" style="margin:4px 0 8px">Đây là chấm tự động của máy để em tự sửa trước. Thầy/cô vẫn chấm kỹ lại sau khi em nộp.</div>';
+
+  if(r.grammar.length){
+    html+='<div class="fbsec"><div class="fbhead">✏️ <b>Ngữ pháp &amp; trình bày</b> ('+r.grammar.length+')</div>';
+    r.grammar.slice(0,6).forEach(g=>{
+      html+='<div class="fixrow"><b>'+esc(g.found)+'</b><br><span class="fixtip">'+g.msg+'</span>'
+        +'<br><span class="fixok">✔ '+g.fix+'</span></div>';
+    });
+    html+='</div>';
+  }
+  html+=sec('🧩','Đủ ý &amp; mạch lạc',r.logic);
+  html+=sec('📚','Dùng từ vựng của bài',r.vocab);
+  html+=sec('🎯','Sức thuyết phục',r.persuade);
+  html+=sec('🕳️','Khe hở lập luận — người phản đối sẽ bắt bẻ chỗ này',r.gaps);
+  if(r.good.length)html+=sec('✅','Em đã làm tốt',r.good);
+
+  box.hidden=false;box.className='scorebox '+r.band.cls;box.innerHTML=html;
+}
+
+function renderS4(){
+  $('#wTopic').textContent=WRITE_TOPIC;
+  $('#wTopicVi').textContent='→ '+WRITE_TOPIC_VI;
+  const box=$('#s4Write');box.innerHTML='';
+  WRITE_PARTS.forEach(p=>{
+    const c=h('div',{class:'wpart'});
+    c.appendChild(h('div',{class:'wpname'},esc(p.n)+' <span class="wpsec">'+esc(p.sec)+'</span>'));
+    c.appendChild(h('div',{class:'wpidea'},'🧠 <b>Ý chính hệ thống gợi ý:</b> '+esc(p.idea)));
+    c.appendChild(h('div',{class:'wptask'},'✍️ <b>Việc của em:</b> '+esc(p.task)));
+    const ta=h('textarea',{placeholder:'Em viết phần này bằng lời của riêng em…'});
+    ta.value=WRITE[p.key]||'';
+    const wc=h('div',{class:'wc'},'0 từ');
+    function cnt(){const n=ta.value.trim()?ta.value.trim().split(/\s+/).length:0;
+      wc.textContent=n+' từ'+(n<p.min?' (cần ≥'+p.min+')':' ✓');
+      wc.className='wc'+(n>=p.min?' wcok':'');return n;}
+    const mb=h('div',{});
     const row=h('div',{class:'recrow'});
-    const bp=h('button',{class:'b sm'},'▶️ Nghe');bp.onclick=()=>speak(s.en);
-    const bl=h('button',{class:'b sm'},'🐢 Nghe chậm');bl.onclick=()=>speak(s.en,null,0.7);
-    row.appendChild(bp);row.appendChild(bl);c.appendChild(row);sb.appendChild(c);
+    const bh=h('button',{class:'b sm'},'💡 Gợi ý thêm');
+    bh.onclick=()=>{bh.disabled=true;mb.appendChild(h('div',{class:'tipbox'},'💡 '+p.hint));};
+    const bm=h('button',{class:'b sm'},'👀 Xem câu mẫu');
+    bm.onclick=()=>{bm.disabled=true;
+      mb.appendChild(h('div',{class:'scriptbox'},'<b>Câu mẫu:</b> '+esc(p.model)+'<br><span class="vexvi">→ '+esc(p.modelvi)+'</span>'
+        +'<br><span class="hint">Đừng chép y nguyên — em viết lại bằng ví dụ của chính mình nhé.</span>'));};
+    row.appendChild(bh);row.appendChild(bm);
+    ta.oninput=()=>{WRITE[p.key]=ta.value;store('write4',WRITE);cnt();renderWriteFeedback();recalcProgress();};
+    cnt();
+    c.appendChild(ta);c.appendChild(wc);c.appendChild(row);c.appendChild(mb);box.appendChild(c);
   });
 
-  const qb=$('#s6Qs');qb.innerHTML='';
-  FREE_Q.forEach((q,i)=>{
-    const c=h('div',{class:'qcard'});
-    c.appendChild(h('div',{class:'qq'},(i+1)+'. '+esc(q.en)));
-    c.appendChild(h('div',{class:'vexvi',style:'margin:0 0 6px'},'→ '+esc(q.vi)));
-    const b=h('button',{class:'b sm'},'🔊 Nghe câu hỏi');
-    b.onclick=()=>speak(q.en);
-    c.appendChild(b);qb.appendChild(c);
+  $('#wCheck').onclick=()=>{renderWriteFeedback();
+    const el=$('#writeFb');if(el&&!el.hidden)el.scrollIntoView({behavior:'smooth',block:'center'});};
+  $('#wFull').onclick=()=>{
+    const t=WRITE_PARTS.map(p=>wText(p.key)).filter(Boolean).join(' ');
+    $('#wFullBox').innerHTML=t?'<div class="scriptbox"><b>Bài viết hoàn chỉnh của em ('+wWords()+' từ):</b><br>'+esc(t)+'</div>'
+      :'<div class="hint">Em viết các phần ở trên trước nhé.</div>';
+  };
+  renderWriteFeedback();
+}
+
+/* ═══ ĐIỀU HƯỚNG — KHÔNG KHOÁ, CHỈ NHẮC ═══ */
+const STEPS=[
+  {id:'s0',n:'0 · Giọng đọc'},
+  {id:'s1',n:'1 · Từ vựng'},
+  {id:'s2',n:'2 · Cảm xúc'},
+  {id:'s3',n:'3 · Nói'},
+  {id:'s4',n:'4 · Viết'},
+  {id:'s5',n:'5 · Nộp bài'}
+];
+const PROGRESS=load('progress',{});
+let CURRENT='s0';
+
+function missingOf(id){
+  const m=[];
+  if(id==='s0'&&!CHOSEN)m.push('chọn một giọng đọc');
+  if(id==='s1'){
+    const left=vocabTotal()-PLAYED.length;
+    if(left>0)m.push('bấm 🔊 nghe '+left+' từ còn lại');
+    if(drillSent()<5)m.push('ghi âm và gửi ít nhất 5 từ (đã gửi '+drillSent()+'/5)');
+    const q=mcLeft('wmc',W_MC.length)+mcLeft('emc',E_MC.length)+mcLeft('imc',I_MC.length)+mcLeft('build',BUILDER.length);
+    if(q>0)m.push('làm '+q+' câu trắc nghiệm còn lại');
+  }
+  if(id==='s2'){
+    const q=mcLeft('dlg',DIALOG_BLANKS.length)+mcLeft('feel',FEEL_Q.length);
+    if(q>0)m.push('làm '+q+' câu còn lại');
+    if(shadowSent()<3)m.push('gửi ít nhất 3 câu shadowing (đã gửi '+shadowSent()+'/3)');
+  }
+  if(id==='s3'){
+    if(sqSent()<SPEAK_Q.length)m.push('gửi '+(SPEAK_Q.length-sqSent())+' câu trả lời còn lại (Mục 1)');
+    if(debateSent()<2)m.push('gửi '+(2-debateSent())+' đoạn tranh luận (Mục 2)');
+  }
+  if(id==='s4'){
+    const done=wPartsDone(), tot=writeUnitTotal();
+    if(done<tot)m.push(writeUnitMsg(tot-done));
+  }
+  if(id==='s5'){
+    const g=load('gate2',{});
+    if(!g.listened||!g.compared)m.push('tick đủ 2 ô ở mục 5.2');
+  }
+  return m;
+}
+function stepDone(id){return missingOf(id).length===0;}
+
+function renderStepper(){
+  const nav=$('#stepperNav');nav.innerHTML='';
+  STEPS.forEach(s=>{
+    const done=stepDone(s.id);
+    const b=h('button',{class:'step-pill'+(s.id===CURRENT?' current':'')+(done?' done':'')},esc(s.n)+(done?' ✓':''));
+    b.onclick=()=>gotoStep(s.id);
+    nav.appendChild(b);
   });
+}
+function remindBox(id){
+  const m=missingOf(id);const el=$('#remind-'+id);if(!el)return;
+  if(!m.length){el.hidden=true;el.innerHTML='';return;}
+  el.hidden=false;el.className='remind';
+  el.innerHTML='<b>📋 Phần này em còn thiếu:</b><ul>'+m.map(x=>'<li>'+esc(x)+'</li>').join('')
+    +'</ul><span class="hint">Em vẫn sang bước khác được — nhớ quay lại làm nốt trước khi nộp nhé.</span>';
+}
+function gotoStep(id){
+  stopSpeak();stopRec();
+  CURRENT=id;
+  STEPS.forEach(s=>{const p=$('#p-'+s.id);if(p)p.classList.toggle('on',s.id===id);});
+  renderStepper();STEPS.forEach(s=>remindBox(s.id));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function recalcProgress(){
+  STEPS.forEach(s=>{PROGRESS[s.id]=stepDone(s.id);});
+  store('progress',PROGRESS);
+  const done=STEPS.filter(s=>PROGRESS[s.id]).length;
+  const pct=Math.round(done/STEPS.length*100);
+  $('#pbarInner').style.width=pct+'%';
+  $('#pbarPct').textContent=done+'/'+STEPS.length+' bước hoàn thành ('+pct+'%)';
+  renderStepper();STEPS.forEach(s=>remindBox(s.id));
+  updateSummary();updateTodo();
+}
+function updateTodo(){
+  const el=$('#todoBox');if(!el)return;
+  const all=[];
+  STEPS.forEach(s=>{const m=missingOf(s.id);if(m.length)all.push('<b>'+esc(s.n)+'</b>: '+m.map(esc).join(', '));});
+  if(!all.length){el.className='remind okremind';el.innerHTML='<b>🎉 Em đã làm xong tất cả!</b> Bấm nút nộp bài bên dưới nhé.';return;}
+  el.className='remind';
+  el.innerHTML='<b>📋 Trước khi nộp, em còn thiếu:</b><ul>'+all.map(x=>'<li>'+x+'</li>').join('')
+    +'</ul><span class="hint">Em vẫn nộp được — thầy/cô sẽ thấy phần nào chưa làm.</span>';
+}
+function updateSummary(){
+  const el=$('#submitSummary');if(!el)return;
+  const avg=drillAvg();
+  el.innerHTML='Bài em sẽ nộp: <b>'+(drillSent()+shadowSent()+sqSent()+debateSent())+' bản ghi âm</b> '
+    +'(phát âm '+drillSent()+'/'+vocabTotal()+' · shadowing '+shadowSent()+'/5 · trả lời '+sqSent()+'/'+SPEAK_Q.length+' · tranh luận '+debateSent()+'/2)'
+    +(avg!=null?' · điểm phát âm TB <b>'+avg+'/100</b>':'')
+    +' · bài viết <b>'+wWords()+' từ</b> · giọng <b>'+(CHOSEN||'chưa chọn')+'</b>.';
+}
 
-  const fb=$('#s6Rec');fb.innerHTML='';
-  fb.appendChild(makeRecorder({key:'free',sample:MODEL_FREE,label:'Bước 6 – Free Speaking',maxSec:120,retries:5,soft:true,
-    fileBase:'B6-free-speaking',onSent:recalcProgress}));
+/* ═══ NỘP BÀI ═══ */
+function scoreLine(){
+  return 'Words '+mcScore('wmc',W_MC)+' · Emotions '+mcScore('emc',E_MC)+' · Idioms '+mcScore('imc',I_MC)
+    +' · Ghép câu '+mcScore('build',BUILDER)+' · Hội thoại '+mcScore('dlg',DIALOG_BLANKS)
+    +' · How-would-feel '+mcScore('feel',FEEL_Q);
+}
+function buildDetails(){
+  const d=[];const N=load('note',{});const SV=load('survey',{});const ALL=allWords();
+  d.push({part:'Bước 0 – Giọng đọc',question:'Giọng đã chọn',answer:(CHOSEN||'chưa chọn'),correct:'',result:''});
+  d.push({part:'Bước 1 – Nghe từ vựng',question:'Số từ đã nghe',answer:PLAYED.length+'/'+vocabTotal(),correct:'',result:PLAYED.length>=vocabTotal()?'Đã nghe hết':'Chưa đủ'});
+  ALL.forEach((w,i)=>{const r=RESULTS['drill_'+i];
+    if(r)d.push({part:'Bước 1 – Phát âm: '+w.w,question:w.w+' '+w.ipa,answer:r.transcript||'(máy không nghe rõ)',
+      correct:w.w,result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+(r.sent?'đã gửi':'chưa gửi')});});
+  const avg=drillAvg();
+  if(avg!=null)d.push({part:'Bước 1 – Điểm phát âm TB',question:'Trung bình',answer:avg+'/100',correct:'',result:avg>=85?'Tốt':avg>=60?'Khá':'Cần luyện thêm'});
+  d.push({part:'Bước 1 – Trắc nghiệm',question:'Words / Emotions / Idioms / Ghép câu',answer:'',correct:'',result:scoreLine()});
+  d.push({part:'Bước 2 – Hội thoại',question:'5 chỗ trống',answer:(QUIZ.dlg||[]).map((v,i)=>v!=null?DIALOG_BLANKS[i].o[v]:'(trống)').join(' | '),correct:'',result:mcScore('dlg',DIALOG_BLANKS)});
+  d.push({part:'Bước 2 – How would he/she feel',question:'6 tình huống',answer:(QUIZ.feel||[]).map((v,i)=>v!=null?FEEL_Q[i].o[v]:'(trống)').join(' | '),correct:'',result:mcScore('feel',FEEL_Q)});
+  SHADOW.forEach((s,i)=>{const r=RESULTS['shadow_'+i];
+    if(r)d.push({part:'Bước 2 – Shadowing '+(i+1),question:s.en,answer:r.transcript||'(máy không nghe rõ)',correct:s.en,
+      result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+(r.sent?'đã gửi':'chưa gửi')});});
+  SPEAK_Q.forEach((q,i)=>{const r=RESULTS['sq_'+i];
+    if(r)d.push({part:'Bước 3 – Câu '+(i+1)+' ('+q.kind+')',question:q.q,answer:r.transcript||'(máy không nghe rõ)',
+      correct:q.model,result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+r.dur+'s · '+(r.sent?'đã gửi':'chưa gửi')});});
+  [['speak_for','Bước 3 – Tranh luận ĐỒNG Ý'],['speak_ag','Bước 3 – Tranh luận PHẢN BÁC']].forEach(([k,lb])=>{
+    const r=RESULTS[k];
+    if(r)d.push({part:lb,question:(r.target||'').slice(0,120),answer:r.transcript||'(máy không nghe rõ)',correct:'',
+      result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+r.dur+'s · '+(r.sent?'đã gửi':'chưa gửi')});});
+  WRITE_PARTS.forEach(p=>{const t=wText(p.key);
+    if(t)d.push({part:'Bước 4 – '+p.n,question:p.idea,answer:t,correct:p.model,result:t.split(/\s+/).length+' từ'});});
+  if(wWords()>=10){
+    const g=gradeWriting();
+    const flat=a=>a.map(x=>String(x).replace(/<[^>]+>/g,'')).join(' | ');
+    d.push({part:'Bước 4 – MÁY CHẤM: ngữ pháp',question:'Lỗi tự động phát hiện',
+      answer:g.grammar.length?g.grammar.map(x=>x.found+' → '+x.msg.replace(/<[^>]+>/g,'')).join(' | '):'(không thấy lỗi)',correct:'',result:g.grammar.length+' lỗi'});
+    d.push({part:'Bước 4 – MÁY CHẤM: đủ ý & logic',question:'Mạch lạc',answer:flat(g.logic)||'(ổn)',correct:'',result:g.logic.length+' điểm'});
+    d.push({part:'Bước 4 – MÁY CHẤM: từ vựng',question:'Dùng 3 tầng',answer:flat(g.vocab)||'(đủ 3 tầng)',correct:'',result:g.vocab.length+' điểm'});
+    d.push({part:'Bước 4 – MÁY CHẤM: thuyết phục',question:'Ví dụ & số liệu',answer:flat(g.persuade)||'(thuyết phục)',correct:'',result:g.persuade.length+' điểm'});
+    d.push({part:'Bước 4 – MÁY CHẤM: khe hở lập luận',question:'Chỗ dễ bị bắt bẻ',answer:flat(g.gaps)||'(không thấy khe hở)',correct:'',result:g.gaps.length+' điểm'});
+    d.push({part:'Bước 4 – MÁY CHẤM: tổng',question:'Mức đánh giá sơ bộ',answer:g.band.t,correct:'',result:g.words+' từ · '+g.sentences+' câu · '+g.issues+' điểm cần lưu ý'});
+  }
+  const miss=[];STEPS.forEach(s=>{const m=missingOf(s.id);if(m.length)miss.push(s.n+': '+m.join(', '));});
+  d.push({part:'Phần chưa hoàn thành',question:'Tự động tổng hợp',answer:miss.length?miss.join(' | '):'(đã làm hết)',correct:'',result:miss.length?miss.length+' mục':'Hoàn thành'});
+  if(SV.q1||SV.q2||SV.q3)d.push({part:'Khảo sát',question:'Khó nhất / Tự tin / Idiom thích',answer:[SV.q1,SV.q2,SV.q3].map(x=>x||'(trống)').join(' | '),correct:'',result:''});
+  return d;
+}
+async function doSubmit(){
+  const nm=stuName();
+  if(!nm){toast('Em gõ tên ở đầu bài trước nhé.');return;}
+  const nRec=drillSent()+shadowSent()+sqSent()+debateSent();
+  if(!confirm('Em sắp nộp '+nRec+' bản ghi âm và bài viết '+wWords()+' từ. Tiếp tục?'))return;
+  const b=$('#submitBtn');b.disabled=true;b.textContent='Đang gửi…';
+  try{
+    await postJSON({type:'submit',name:nm,lesson:LESSON,
+      summary:{recordings:nRec,avg:drillAvg(),full:(CHOSEN||''),writes:wWords()+' từ',quiz:scoreLine()},
+      details:buildDetails()});
+    $('#submitResult').innerHTML='<div class="remind okremind" style="margin-top:10px"><b>✅ Đã nộp bài!</b> Thầy/cô sẽ nghe bài và nhận xét cho em sớm nhé.</div>';
+    b.textContent='✅ Đã nộp bài';toast('Đã nộp bài thành công!');
+  }catch(err){b.disabled=false;b.textContent='📨 Nộp bài cho thầy/cô';toast('Gửi chưa được. Em kiểm tra mạng rồi bấm lại nhé.');}
+}
 
+function renderS5(){
   const CK=load('ck6',{});
-  const cb=$('#s6Check');cb.innerHTML='';
-  ['Tôi dùng ít nhất 2 từ TẦNG 1 (Words)','Tôi dùng ít nhất 2 cụm TẦNG 2 (Emotions)',
-   'Tôi dùng ít nhất 2 TẦNG 3 (Idioms)','Tôi phát âm rõ, không nuốt âm cuối','Bài nói dài 90–120 giây'].forEach((t,i)=>{
-    const l=h('label',{class:'chk'});
-    const ip=h('input',{type:'checkbox'});
+  const cb=$('#s5Check');cb.innerHTML='';
+  ['Tôi dùng ít nhất 2 từ TẦNG 1 (Words)','Tôi dùng ít nhất 2 cụm TẦNG 2 (Emotions)','Tôi dùng ít nhất 2 TẦNG 3 (Idioms)',
+   'Tôi phát âm rõ, không nuốt âm cuối','Bài viết của tôi có ví dụ của riêng tôi'].forEach((t,i)=>{
+    const l=h('label',{class:'chk'});const ip=h('input',{type:'checkbox'});
     if(CK['s'+i])ip.checked=true;
     ip.onchange=()=>{CK['s'+i]=ip.checked;store('ck6',CK);};
     l.appendChild(ip);l.appendChild(h('span',{},esc(t)));cb.appendChild(l);
   });
-
   const GATE2=load('gate2',{listened:false,compared:false});
-  const g=$('#s6Gate');g.innerHTML='';
-  [['listened','✅ I have listened to my recording — Em đã nghe lại bản ghi của mình'],
-   ['compared','✅ I have compared with the sample — Em đã bấm So sánh với giọng mẫu']].forEach(([k,t])=>{
-    const l=h('label',{class:'chk'});
-    const ip=h('input',{type:'checkbox'});
+  const g=$('#s5Gate');g.innerHTML='';
+  [['listened','✅ Em đã nghe lại các bản ghi âm của mình'],
+   ['compared','✅ Em đã bấm So sánh với giọng mẫu']].forEach(([k,t])=>{
+    const l=h('label',{class:'chk'});const ip=h('input',{type:'checkbox'});
     if(GATE2[k])ip.checked=true;
-    ip.onchange=()=>{GATE2[k]=ip.checked;store('gate2',GATE2);syncSubmit();};
+    ip.onchange=()=>{GATE2[k]=ip.checked;store('gate2',GATE2);syncSubmit();recalcProgress();};
     l.appendChild(ip);l.appendChild(h('span',{},'<b>'+esc(t)+'</b>'));g.appendChild(l);
   });
-
   const SV=load('survey',{q1:'',q2:'',q3:''});
-  const sv=$('#s6Survey');sv.innerHTML='';
+  const sv=$('#s5Survey');sv.innerHTML='';
   const mk=(lb,el)=>{const r=h('div',{style:'margin:9px 0'});
     r.appendChild(h('div',{style:'font-weight:600;font-size:14px;margin-bottom:3px'},lb));r.appendChild(el);return r;};
   const s1=h('select',{class:'sv'});
-  ['— chọn —','Từ vựng','Ngữ pháp','Phát âm','Nói tự do','Viết'].forEach(o=>s1.appendChild(h('option',{value:o==='— chọn —'?'':o},o)));
+  ['— chọn —','Từ vựng','Ngữ pháp cảm xúc','Phát âm','Nói','Viết'].forEach(o=>s1.appendChild(h('option',{value:o==='— chọn —'?'':o},o)));
   s1.value=SV.q1||'';s1.onchange=()=>{SV.q1=s1.value;store('survey',SV);};
   sv.appendChild(mk('1. Phần nào khó nhất với em hôm nay?',s1));
   const s2=h('select',{class:'sv'});
@@ -1211,219 +1497,17 @@ function renderS6(){
   syncSubmit();
 }
 function syncSubmit(){
-  const g=load('gate2',{});
-  const b=$('#submitBtn');if(!b)return;
-  const ok=g.listened&&g.compared;
-  b.disabled=!ok;
+  const g=load('gate2',{});const b=$('#submitBtn');if(!b)return;
+  const ok=g.listened&&g.compared;b.disabled=!ok;
   const t=$('#submitHint');
-  if(t)t.innerHTML=ok?'':'⚠️ Em tick đủ <b>2 ô</b> ở mục 6.4 để bật nút nộp bài (<i>Please listen and compare first</i>).';
-}
-
-/* ═══ ĐIỀU HƯỚNG — KHÔNG KHOÁ, CHỈ NHẮC ═══ */
-const STEPS=[
-  {id:'s0',n:'0 · Giọng đọc'},
-  {id:'s1',n:'1 · Từ vựng'},
-  {id:'s2',n:'2 · Ngữ pháp'},
-  {id:'s3',n:'3 · Tranh luận'},
-  {id:'s4',n:'4 · Brainstorm'},
-  {id:'s5',n:'5 · Nói & Viết'},
-  {id:'s6',n:'6 · Nộp bài'}
-];
-const PROGRESS=load('progress',{});
-let CURRENT='s0';
-
-/* Danh sách việc còn thiếu của từng bước — dùng để NHẮC, không để chặn */
-function missingOf(id){
-  const m=[];
-  if(id==='s0'&&!CHOSEN)m.push('chọn một giọng đọc');
-  if(id==='s1'){
-    const left=vocabTotal()-PLAYED.length;
-    if(left>0)m.push('bấm 🔊 nghe '+left+' từ còn lại');
-    if(drillSent()<5)m.push('ghi âm và gửi ít nhất 5 từ (đã gửi '+drillSent()+'/5)');
-    const q=mcLeft('wmc',W_MC.length)+mcLeft('emc',E_MC.length)+mcLeft('imc',I_MC.length)+mcLeft('build',BUILDER.length);
-    if(q>0)m.push('làm '+q+' câu trắc nghiệm còn lại');
-  }
-  if(id==='s2'){
-    const q=mcLeft('dlg',DIALOG_BLANKS.length);
-    if(q>0)m.push('làm '+q+' chỗ trống hội thoại');
-    if(shadowSent()<3)m.push('gửi ít nhất 3 câu shadowing (đã gửi '+shadowSent()+'/3)');
-  }
-  if(id==='s3'){const q=mcLeft('side',SIDE_Q.length);if(q>0)m.push('phân loại '+q+' câu còn lại');}
-  if(id==='s4'){
-    const q=mcLeft('map',MINDMAP.length)+mcLeft('b4',B4_MC.length);
-    if(q>0)m.push('làm '+q+' câu còn lại');
-    if(noteFilled()<3)m.push('điền ít nhất 3 dòng Notebook (đã có '+noteFilled()+'/3)');
-  }
-  if(id==='s5'){
-    if(!(RESULTS['speak_for']&&RESULTS['speak_for'].sent))m.push('gửi đoạn nói ỦNG HỘ');
-    if(!(RESULTS['speak_ag']&&RESULTS['speak_ag'].sent))m.push('gửi đoạn nói PHẢN BÁC');
-    if(writeWords()<25)m.push('viết thêm (mới '+writeWords()+'/25 từ)');
-  }
-  if(id==='s6'){
-    if(!(RESULTS['free']&&RESULTS['free'].sent))m.push('gửi bài nói tự do');
-    const g=load('gate2',{});
-    if(!g.listened||!g.compared)m.push('tick đủ 2 ô ở mục 6.4');
-  }
-  return m;
-}
-function stepDone(id){return missingOf(id).length===0;}
-
-function renderStepper(){
-  const nav=$('#stepperNav');nav.innerHTML='';
-  STEPS.forEach(s=>{
-    const done=stepDone(s.id);
-    const b=h('button',{class:'step-pill'+(s.id===CURRENT?' current':'')+(done?' done':'')},
-      esc(s.n)+(done?' ✓':''));
-    b.onclick=()=>gotoStep(s.id);   /* luôn vào được */
-    nav.appendChild(b);
-  });
-}
-function remindBox(id){
-  const m=missingOf(id);
-  const el=$('#remind-'+id);
-  if(!el)return;
-  if(!m.length){el.hidden=true;el.innerHTML='';return;}
-  el.hidden=false;
-  el.className='remind';
-  el.innerHTML='<b>📋 Phần này em còn thiếu:</b><ul>'+m.map(x=>'<li>'+esc(x)+'</li>').join('')
-    +'</ul><span class="hint">Em vẫn sang bước khác được — nhưng nhớ quay lại làm nốt trước khi nộp bài nhé.</span>';
-}
-function gotoStep(id){
-  stopSpeak();stopRec();
-  CURRENT=id;
-  STEPS.forEach(s=>{const p=$('#p-'+s.id);if(p)p.classList.toggle('on',s.id===id);});
-  renderStepper();
-  STEPS.forEach(s=>remindBox(s.id));
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-function recalcProgress(){
-  STEPS.forEach(s=>{PROGRESS[s.id]=stepDone(s.id);});
-  store('progress',PROGRESS);
-  const done=STEPS.filter(s=>PROGRESS[s.id]).length;
-  const pct=Math.round(done/STEPS.length*100);
-  $('#pbarInner').style.width=pct+'%';
-  $('#pbarPct').textContent=done+'/'+STEPS.length+' bước hoàn thành ('+pct+'%)';
-  renderStepper();
-  STEPS.forEach(s=>remindBox(s.id));
-  updateSummary();updateTodo();
-}
-function updateTodo(){
-  const el=$('#todoBox');if(!el)return;
-  const all=[];
-  STEPS.forEach(s=>{const m=missingOf(s.id);if(m.length)all.push('<b>'+esc(s.n)+'</b>: '+m.map(esc).join(', '));});
-  if(!all.length){el.className='remind okremind';el.innerHTML='<b>🎉 Em đã làm xong tất cả các bước!</b> Bấm nút nộp bài bên dưới nhé.';return;}
-  el.className='remind';
-  el.innerHTML='<b>📋 Trước khi nộp, em còn thiếu:</b><ul>'+all.map(x=>'<li>'+x+'</li>').join('')
-    +'</ul><span class="hint">Em vẫn nộp được — thầy/cô sẽ thấy phần nào chưa làm.</span>';
-}
-function updateSummary(){
-  const el=$('#submitSummary');if(!el)return;
-  const d=drillSent(),s=shadowSent();
-  const sf=RESULTS['speak_for']&&RESULTS['speak_for'].sent?1:0;
-  const sa=RESULTS['speak_ag']&&RESULTS['speak_ag'].sent?1:0;
-  const fr=RESULTS['free']&&RESULTS['free'].sent?1:0;
-  const avg=drillAvg();
-  el.innerHTML='Bài em sẽ nộp: <b>'+(d+s+sf+sa+fr)+' bản ghi âm</b> (phát âm '+d+'/'+vocabTotal()
-    +' · shadowing '+s+'/5 · nói '+(sf+sa)+'/2 · tự do '+fr+'/1)'
-    +(avg!=null?' · điểm phát âm TB <b>'+avg+'/100</b>':'')
-    +' · <b>'+writeWords()+' từ</b> bài viết · giọng <b>'+(CHOSEN||'chưa chọn')+'</b>.';
-}
-
-/* ═══ NỘP BÀI ═══ */
-function scoreLine(){
-  return 'Words '+mcScore('wmc',W_MC)+' · Emotions '+mcScore('emc',E_MC)+' · Idioms '+mcScore('imc',I_MC)
-    +' · Builder '+mcScore('build',BUILDER)+' · Hội thoại '+mcScore('dlg',DIALOG_BLANKS)
-    +' · Phân loại '+mcScore('side',SIDE_Q)+' · Mindmap '+mcScore('map',MINDMAP)+' · Cảm xúc '+mcScore('b4',B4_MC);
-}
-function buildDetails(){
-  const d=[];
-  const W=load('write',{for:'',ag:''});
-  const N=load('note',{});
-  const SV=load('survey',{});
-  const ALL=[...TIER1,...TIER2,...TIER3];
-  d.push({part:'Bước 0 – Giọng đọc',question:'Giọng đã chọn',answer:(CHOSEN||'chưa chọn'),correct:'',result:''});
-  d.push({part:'Bước 1 – Nghe từ vựng',question:'Số từ đã nghe',answer:PLAYED.length+'/'+vocabTotal(),correct:'',result:PLAYED.length>=vocabTotal()?'Đã nghe hết':'Chưa đủ'});
-  ALL.forEach((w,i)=>{
-    const r=RESULTS['drill_'+i];
-    if(r)d.push({part:'Bước 1 – Phát âm: '+w.w,question:w.w+' '+w.ipa,
-      answer:r.transcript||'(máy không nghe rõ)',correct:w.w,
-      result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+(r.sent?'đã gửi':'chưa gửi')});
-  });
-  const avg=drillAvg();
-  if(avg!=null)d.push({part:'Bước 1 – Điểm phát âm TB',question:'Trung bình các từ đã ghi',answer:avg+'/100',correct:'',result:avg>=85?'Tốt':avg>=60?'Khá':'Cần luyện thêm'});
-  d.push({part:'Bước 1 – Words',question:'Nối + trắc nghiệm',answer:(QUIZ.wmc||[]).map((v,i)=>v!=null?W_MC[i].o[v]:'(trống)').join(' | '),correct:'',result:'Nối '+matchScore('wmatch',W_MATCH)+' · TN '+mcScore('wmc',W_MC)});
-  d.push({part:'Bước 1 – Emotions',question:'Nối + trắc nghiệm',answer:(QUIZ.emc||[]).map((v,i)=>v!=null?E_MC[i].o[v]:'(trống)').join(' | '),correct:'',result:'Nối '+matchScore('ematch',E_MATCH)+' · TN '+mcScore('emc',E_MC)});
-  d.push({part:'Bước 1 – Idioms',question:'Nối + trắc nghiệm',answer:(QUIZ.imc||[]).map((v,i)=>v!=null?I_MC[i].o[v]:'(trống)').join(' | '),correct:'',result:'Nối '+matchScore('imatch',I_MATCH)+' · TN '+mcScore('imc',I_MC)});
-  d.push({part:'Bước 1 – Sentence Builder',question:'Ghép 3 tầng',answer:(QUIZ.build||[]).map((v,i)=>v!=null?('C'+(i+1)+': '+String.fromCharCode(65+v)):'(trống)').join(' | '),correct:'',result:mcScore('build',BUILDER)});
-  d.push({part:'Bước 2 – Hội thoại',question:'5 chỗ trống Anna–Ben',answer:(QUIZ.dlg||[]).map((v,i)=>v!=null?DIALOG_BLANKS[i].o[v]:'(trống)').join(' | '),correct:'',result:mcScore('dlg',DIALOG_BLANKS)});
-  d.push({part:'Bước 2 – Ghép cảm xúc',question:'5 câu',answer:(QUIZ.g2match||[]).join(' | '),correct:'',result:matchScore('g2match',G2_MATCH)});
-  const RW=load('rewrite',[]);
-  REWRITE.forEach((it,i)=>{if((RW[i]||'').trim())d.push({part:'Bước 2 – Viết lại câu '+(i+1),question:it.q,answer:RW[i],correct:it.show.replace(/<[^>]+>/g,''),result:it.x});});
-  SHADOW.forEach((s,i)=>{
-    const r=RESULTS['shadow_'+i];
-    if(r)d.push({part:'Bước 2 – Shadowing '+(i+1),question:s.en,answer:r.transcript||'(máy không nghe rõ)',correct:s.en,
-      result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+(r.sent?'đã gửi':'chưa gửi')});
-  });
-  d.push({part:'Bước 3 – Phân loại',question:'6 câu SAVE/SPEND',answer:(QUIZ.side||[]).map(v=>v!=null?['SAVE','SPEND'][v]:'(trống)').join(' | '),correct:'',result:mcScore('side',SIDE_Q)});
-  d.push({part:'Bước 4 – Mindmap',question:'15 từ vào 3 tầng',answer:'',correct:'',result:mcScore('map',MINDMAP)});
-  d.push({part:'Bước 4 – Câu cảm xúc',question:'4 câu',answer:(QUIZ.b4||[]).map((v,i)=>v!=null?B4_MC[i].o[v]:'(trống)').join(' | '),correct:'',result:mcScore('b4',B4_MC)});
-  d.push({part:'Bước 4 – Notebook',question:'Words / Emotions / Idioms / Lập luận / Ngữ pháp',
-    answer:[N.w,N.e,N.i,N.arg,N.g].map(x=>x||'(trống)').join(' | '),correct:'',result:noteFilled()+'/5 dòng'});
-  if((W.for||'').trim())d.push({part:'Bước 5 – Viết ỦNG HỘ',question:'2–3 câu',answer:W.for.trim(),correct:'',result:W.for.trim().split(/\s+/).length+' từ'});
-  if((W.ag||'').trim())d.push({part:'Bước 5 – Viết PHẢN BÁC',question:'2–3 câu',answer:W.ag.trim(),correct:'',result:W.ag.trim().split(/\s+/).length+' từ'});
-  [['speak_for','Bước 5 – Nói ỦNG HỘ'],['speak_ag','Bước 5 – Nói PHẢN BÁC'],['free','Bước 6 – Nói tự do']].forEach(([k,lb])=>{
-    const r=RESULTS[k];
-    if(r)d.push({part:lb,question:(r.target||'').slice(0,120),answer:r.transcript||'(máy không nghe rõ)',correct:'',
-      result:(r.score!=null?r.score+'/100':'chưa chấm')+' · '+r.dur+'s · '+(r.sent?'đã gửi':'chưa gửi')});
-  });
-  const miss=[];STEPS.forEach(s=>{const m=missingOf(s.id);if(m.length)miss.push(s.n+': '+m.join(', '));});
-  d.push({part:'Phần chưa hoàn thành',question:'Tự động tổng hợp',answer:miss.length?miss.join(' | '):'(đã làm hết)',correct:'',result:miss.length?miss.length+' mục':'Hoàn thành'});
-  if(SV.q1||SV.q2||SV.q3)d.push({part:'Khảo sát',question:'Khó nhất / Tự tin / Idiom thích',answer:[SV.q1,SV.q2,SV.q3].map(x=>x||'(trống)').join(' | '),correct:'',result:''});
-  return d;
-}
-async function doSubmit(){
-  const nm=stuName();
-  if(!nm){toast('Em gõ tên ở đầu bài trước nhé.');return;}
-  const d=drillSent(),s=shadowSent();
-  const sf=RESULTS['speak_for']&&RESULTS['speak_for'].sent?1:0;
-  const sa=RESULTS['speak_ag']&&RESULTS['speak_ag'].sent?1:0;
-  const fr=RESULTS['free']&&RESULTS['free'].sent?1:0;
-  const nRec=d+s+sf+sa+fr, wW=writeWords(), avg=drillAvg();
-  if(!confirm('Em sắp nộp '+nRec+' bản ghi âm và bài viết '+wW+' từ. Tiếp tục?'))return;
-  const b=$('#submitBtn');b.disabled=true;b.textContent='Đang gửi…';
-  try{
-    await postJSON({type:'submit',name:nm,lesson:LESSON,
-      summary:{recordings:nRec,avg:avg,full:(CHOSEN||''),writes:wW+' từ',quiz:scoreLine()},
-      details:buildDetails()});
-    $('#submitResult').innerHTML='<div class="remind okremind" style="margin-top:10px"><b>✅ Đã nộp bài!</b> Thầy/cô sẽ nghe bài và nhận xét cho em sớm nhé.</div>';
-    b.textContent='✅ Đã nộp bài';
-    toast('Đã nộp bài thành công!');
-  }catch(err){
-    b.disabled=false;b.textContent='📨 Nộp bài cho thầy/cô';
-    toast('Gửi chưa được. Em kiểm tra mạng rồi bấm lại nhé.');
-  }
+  if(t)t.innerHTML=ok?'':'⚠️ Em tick đủ <b>2 ô</b> ở mục 5.2 để bật nút nộp bài.';
 }
 
 /* ═══ KHỞI ĐỘNG ═══ */
 function boot(){
-  $('#aiOpinion').textContent=AI_OPINION;
-  $('#aiOpinionVi').textContent='→ '+AI_OPINION_VI;
-  $('#playAI').onclick=()=>speak(AI_OPINION);
-  $('#s4PlayFrame').onclick=()=>speak('To be honest, I think young people should save more. Having savings gives me peace of mind, because you never know when an emergency will happen. Last year my motorbike broke down and I had money ready. At the end of the day, you have to save for a rainy day.');
-  $('#showModel').onclick=()=>{
-    $('#showModel').disabled=true;
-    $('#modelBox').innerHTML='<div class="scriptbox" style="margin-top:9px">'+esc(MODEL_FREE)
-      +'<br><span class="vexvi">→ '+esc(MODEL_FREE_VI)+'</span></div>';
-    const b=h('button',{class:'b sm',style:'margin-top:6px'},'🔊 Nghe bài mẫu');
-    b.onclick=()=>speak(MODEL_FREE);
-    $('#modelBox').appendChild(b);
-  };
   $('#rate').oninput=()=>{$('#rateV').textContent=$('#rate').value+'x';};
   $('#changeVoice').onclick=()=>{gotoStep('s0');toast('Em chọn lại giọng rồi quay lại bài nhé.');};
-
-  /* Nút "Sang bước" — luôn đi được, chỉ nhắc nếu còn thiếu */
-  [['s0Next','s0','s1'],['s1Next','s1','s2'],['s2Next','s2','s3'],['s3Next','s3','s4'],
-   ['s4Next','s4','s5'],['s5Next','s5','s6']].forEach(([btn,from,to])=>{
+  [['s0Next','s0','s1'],['s1Next','s1','s2'],['s2Next','s2','s3'],['s3Next','s3','s4'],['s4Next','s4','s5']].forEach(([btn,from,to])=>{
     const el=$('#'+btn);if(!el)return;
     el.onclick=()=>{
       const m=missingOf(from);
@@ -1432,11 +1516,9 @@ function boot(){
     };
   });
   $('#submitBtn').onclick=doSubmit;
-
   renderVoicePicker();updVoiceChip();
-  renderS1();renderS2();renderS3();renderS4();renderS5();renderS6();
+  renderS1();renderS2();renderS3();renderS4();renderS5();
   recalcProgress();
-
   const saved=load('name','');
   if(saved){$('#stuName').value=saved;$('#gate').hidden=true;}
   $('#gateGo').onclick=()=>{
